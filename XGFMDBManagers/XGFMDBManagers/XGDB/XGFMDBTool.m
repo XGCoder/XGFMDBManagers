@@ -248,7 +248,7 @@ static XGFMDBTool *sharedFMDBManager = nil;
 - (NSArray *)getObjectByType:(NSString *)type fromTable:(NSString *)tableName;
 {
     if (type == nil) return nil;
-    return [self.storeManger getObjItemWithSearchCondition:@"type" Count:0 fromTable:tableName];
+    return [self.storeManger getObjItemWithSearchCondition:updateType Count:0 fromTable:tableName];
 }
 /**
  *  根据某条数据id 获取之前10条的数据 (用于上拉刷新)(倒序 时间早的在后面)

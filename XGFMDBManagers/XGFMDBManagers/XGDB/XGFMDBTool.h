@@ -12,12 +12,12 @@
     思路:
                 这个数据库 思路 借鉴了 猿题库开源数据库https://github.com/yuantiku/YTKKeyValueStore Key  Value的思路
     遇到的问题:  
-                在使用时遇到查询某一类型的数据时 YTKKeyValueStore 对外只留了 时间 和id 以供查询  
+                在使用时遇到查询某一类型的数据时 YTKKeyValueStore 数据表格 只留了 时间 和id 以供查询
                 显而易见 这样的数据库结构极不方便条件查询 
                 在XGKeyValueStore中进行了 优化
  
     存储数据种类:
-                YTKKeyValueStore 所存储的 数据类型有限
+                YTKKeyValueStore 所存储的 数据类型 有限
                 XGKeyValueStore  只要给数据 就能存  (字典 模型 字符串等)任意存任意取 并且模型不用遵守NSCoding协议
  
     缺点:
@@ -38,7 +38,7 @@ static NSString *const DEFAULT_XG_TABLE_NAME = @"XG_bbb_teacher";
 static NSString *const XG_TABLE_ClASSNEWSMODEL = @"Class_News_Model";
 
 //默认 存储个数
-static int  XG_DEFAUL_INSERT_COUNT = 20;
+static int  XG_DEFAUL_INSERT_COUNT = 50;
 
 
 @interface XGFMDBTool : NSObject

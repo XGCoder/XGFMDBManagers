@@ -46,7 +46,7 @@ text3 TEXT, \
 PRIMARY KEY(id)) \
 ";
 
-static NSString *const DEFAULT_DB_NAME = @"XG_hbb.sqlite";
+static NSString *const DEFAULT_DB_NAME = @"database.sqlite";
 
 
 // 插入 (直接覆盖)
@@ -67,7 +67,7 @@ static NSString *const SELECT_CONDITION_ITEM_SQL = @"SELECT * from ";
 
 static NSString *const SELECT_COUNT_SQL = @"SELECT count(id) as count from %@";
 //拼接时间的sql
-static NSString *const SELECT_MOSAIC_TIME_SQL = @"order by createdTime desc";
+static NSString *const SELECT_MOSAIC_TIME_SQL = @"order by ";
 
 
 //--------------------------------------------------------------------------------------------------------------------------------
@@ -157,9 +157,6 @@ static NSString *const SELECT_MOSAIC_TIME_SQL = @"order by createdTime desc";
     }
     
 }
-
-///**************************************** 新版数据库 **************************************************
-
 
 - (void)createCustomTableWithName:(NSString *)tableName// withTableFieldArray:(NSArray *)fieldArray;
 {
@@ -499,20 +496,37 @@ static NSString *const SELECT_MOSAIC_TIME_SQL = @"order by createdTime desc";
  */
 - (NSArray *)getObjItemsWithobjId:(NSString *)objId Count:(int)count fromTable:(NSString *)tableName;
 {
+    
+    NSArray * array = [self getObjItemsWithobjId:objId Count:count selectOrder:nil fromTable:tableName];
+    if (array) {
+        return array;
+    }
+    return nil;
+}
+
+- (NSArray *)getObjItemsWithobjId:(NSString *)objId Count:(int)count selectOrder:(NSString *)selectOrder fromTable:(NSString *)tableName;
+{
     if ([XGKeyValueStore checkTableName:tableName] == NO) {
         return nil;
     }
+    NSString * select_Order;
+    if (selectOrder) {
+        select_Order = [NSString stringWithFormat:@"%@ %@ desc,createdTime desc",SELECT_MOSAIC_TIME_SQL,select_Order];
+    }else{
+        select_Order = [NSString stringWithFormat:@"%@ createdTime desc",SELECT_MOSAIC_TIME_SQL];
+    }
     NSString * sql;
     if (objId) {
-        sql = [NSString stringWithFormat:@"%@ %@ where createdTime < (select createdTime from %@ where id= %@) %@",SELECT_CONDITION_ITEM_SQL,tableName,tableName,objId,SELECT_MOSAIC_TIME_SQL];
+        sql = [NSString stringWithFormat:@"%@ %@ where createdTime < (select createdTime from %@ where id= %@) %@",SELECT_CONDITION_ITEM_SQL,tableName,tableName,objId,selectOrder];
     }else{
-        sql =[NSString stringWithFormat:@"%@ %@ %@",SELECT_CONDITION_ITEM_SQL,tableName,SELECT_MOSAIC_TIME_SQL];
+        sql =[NSString stringWithFormat:@"%@ %@ %@",SELECT_CONDITION_ITEM_SQL,tableName,selectOrder];
     }
     if (count) {
         sql = [NSString stringWithFormat:@"%@ Limit %d",sql,count];
     }
     return [self getItemsWithSQL:sql];
     
+
     
     return nil;
 }

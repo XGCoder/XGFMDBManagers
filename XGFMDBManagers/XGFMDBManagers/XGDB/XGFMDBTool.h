@@ -28,14 +28,13 @@
         使用 这个数据库需要引入XGDB文件夹 中的 几个类
  
         对外使用 只需用XGFMDBTool 就OK  查询 数据 返回的数据都是XGKeyValueItem 模型 其中的itemResult 就是所存储的数据
+        id  pos 必传      pos(辅助主键) 可以读取数据时排序使用
  
  */
 
 
 //默认表格名称
-static NSString *const DEFAULT_XG_TABLE_NAME = @"XG_bbb_teacher";
-
-static NSString *const XG_TABLE_ClASSNEWSMODEL = @"Class_News_Model";
+static NSString *const DEFAULT_XG_TABLE_NAME = @"default_database_table";
 
 //默认 存储个数
 static int  XG_DEFAUL_INSERT_COUNT = 50;
@@ -167,10 +166,10 @@ static int  XG_DEFAUL_INSERT_COUNT = 50;
 
 /**
  *  根据某条数据id 获取之前10条的数据 (用于上拉刷新)(倒序 时间早的在后面)
+ *  (根据插入时间进行排序的  所以如果有顺序需求 尽量不要用这个方法) 后期会完善增加方法
  *
  *  @param objectId  上拉刷新最后一条id
  *  @param tableName 表格名
- *
  *  @return 返回数组 (后10条数据 数组)数组 里面全是 XGKeyValueItem 模型
  */
 - (NSArray *)getLastTenDBObjectById:(NSString *)objectId
@@ -179,13 +178,20 @@ static int  XG_DEFAUL_INSERT_COUNT = 50;
 
 
 /**
- *  获取这个表格的所有数据
+ *  获取这个表格的所有数据 (默认根据插入时间排序)
  *
  *  @param fromTable  数据表
  *
  *  @return 所有数据
  */
 - (NSArray *) getAllObjsFromTable:(NSString *)fromTable;
+
+/**
+ *   获取这个表格的所有数据  根据传入数据库的pos 字段排序
+ */
+- (NSArray *) getAllObjsWithPositionFromTable:(NSString *)fromTable;
+
+
 
 /**
  *  返回数据库中的最后一条数据

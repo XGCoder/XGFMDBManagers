@@ -35,7 +35,7 @@ static NSString *const  updateText3  = @"text3";
 ///-------------增
 
 /**
- *  增加一条数据  核心代码
+ *  增加一条数据 
  *  id  object pos 不能为空  position 备用主键
  *  maxCount 是限定这个表数据条数
  */
@@ -132,6 +132,15 @@ static NSString *const  updateText3  = @"text3";
  *  count 如果为空默认是从id之后的所有的数据
  */
 - (NSArray *)getObjItemsWithobjId:(NSString *)objId Count:(int)count fromTable:(NSString *)tableName;
+
+/**
+ *  从 objId 位置开始 获取一定数目的数据
+ *  objId 不能为nil  id 如果为空 就是表中所有的数据
+ *  count 如果为空默认是从id之后的所有的数据
+ *  selectOrder 需要根据数据库的什么字段排序 如果为nil 默认用传入时间
+ */
+- (NSArray *)getObjItemsWithobjId:(NSString *)objId Count:(int)count selectOrder:(NSString *)selectOrder fromTable:(NSString *)tableName;
+
 
 /**
  *  自己写sql (只限)查询数据

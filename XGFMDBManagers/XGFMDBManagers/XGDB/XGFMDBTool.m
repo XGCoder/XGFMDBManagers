@@ -261,7 +261,8 @@ static XGFMDBTool *sharedFMDBManager = nil;
 - (NSArray *)getLastTenDBObjectById:(NSString *)objectId fromTable:(NSString *)tableName;
 {
     if (objectId == nil){
-        return [self.storeManger getAllItemsFromTable:tableName];
+        XGKeyValueItem * item = [self getLastObjFromTable:tableName];
+        return [self.storeManger getObjItemsWithobjId:item.itemId Count:10 fromTable:tableName];
     }else{
         return  [self.storeManger getObjItemsWithobjId:objectId Count:10 fromTable:tableName];
     }
@@ -281,6 +282,16 @@ static XGFMDBTool *sharedFMDBManager = nil;
 {
     return [self.storeManger getAllItemsFromTable:fromTable];
 }
+
+/**
+ *   获取这个表格的所有数据  根据传入数据库的pos 字段
+ */
+- (NSArray *) getAllObjsWithPositionFromTable:(NSString *)fromTable;
+{
+    return [self.storeManger getObjItemsWithobjId:nil Count:0 selectOrder:updatePosition fromTable:fromTable];
+
+}
+
 - (id)getLastObjFromTable:(NSString *)fromeTable;
 {
     NSArray * myArray = [self getAllObjsFromTable:fromeTable];

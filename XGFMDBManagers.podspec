@@ -11,6 +11,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/zhaoxiaoga/XGFMDBManagers.git", :tag => s.version }
   s.source_files  = "XGFMDBManagers/XGFMDBManagers/XGDB", "XGFMDBManagers/XGFMDBManagers/XGDB/**/*.{h,m}"
   s.requires_arc = true
-  
+  s.dependency   "FMDB", "~> 2.0"  
   # s.exclude_files = "Classes/Exclude"
 end

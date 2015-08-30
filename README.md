@@ -13,12 +13,11 @@
             在XGKeyValueStore中进行了 优化
  存储数据种类:
  
-                YTKKeyValueStore 所存储的 数据类型 有限
                 XGKeyValueStore  只要给数据 就能存  (字典 模型 字符串等)任意存任意取 并且模型不用遵守NSCoding协议
                 
   缺点:
               
-               XGKeyValueStore 暂时支持存的 是什么东西 数据库返回的就是什么东西  不会对数据进行处理(如果存的是json 数据库不会处理)
+               XGKeyValueStore 暂时支持  存的是什么东西  数据库返回的就是什么东西  不会对数据进行处理(如果存的是json 数据库不会处理)
  
   如何使用: 
  

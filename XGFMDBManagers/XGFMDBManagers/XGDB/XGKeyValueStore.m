@@ -209,7 +209,7 @@ static NSString *const SELECT_MOSAIC_TIME_SQL = @"order by ";
     id  dicModel;
     NSData * jsonString;
     
-#warning 加字段 --- modelJson
+//#warning 加字段 --- modelJson
     NSString * textfiled = [self returnInsertFiledWithData:object];
     if ([textfiled isEqualToString:updateDicmodel]) {
         dicModel = object;
@@ -397,7 +397,7 @@ static NSString *const SELECT_MOSAIC_TIME_SQL = @"order by ";
         return;
     }
     id upObject;
-#warning  判断是什么数据 需要分字段存储
+//#warning  判断是什么数据 需要分字段存储
     if ([condition isEqualToString:updateObject] || [condition isEqualToString:updateDicmodel]) {//如果更改条件是 整条数据 需要处理
         //要修改哪个字段
         condition = [self returnInsertFiledWithData:object];

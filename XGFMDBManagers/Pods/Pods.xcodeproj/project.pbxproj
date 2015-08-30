@@ -7,213 +7,423 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09147C4C33D3F2917EA82564BC9DA18E /* MJPropertyType.h in Headers */ = {isa = PBXBuildFile; fileRef = 40B99D16821D1C6011CC632EAD2051A6 /* MJPropertyType.h */; };
-		0A78F791ABA6CB38C7101D560B8E1B84 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 258C31C86B3738643AFA78ED79A9D22D /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		0B8A71C72741EC9C7EFFFFFC1138E671 /* NSString+MJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 814E55961A4B38569F37A873EF5F64D2 /* NSString+MJExtension.h */; };
-		0B9D2BC455B3FEEF77DB736715601986 /* FMDB-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D5C66CA23B6442084AF01A119087867D /* FMDB-dummy.m */; };
-		170D5EA544FD734196A17B89F382B4C1 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D6CAC333D828D46FB12AB32ED49D96 /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		1EDC0C4CD80AC6695BB1A3A44DA69547 /* NSObject+MJCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = D1774A9DEF6C91144A442176531F2FF2 /* NSObject+MJCoding.h */; };
-		23FA7F3B9F79F8EEDC14650987495F88 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 097EE3F7F1152765756FB1A708CFE215 /* Pods-dummy.m */; };
-		2F8D80590A38C73F058840CCBB6707CE /* MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = AD29FFAB95DD0F02450766CE73277A97 /* MJProperty.m */; };
-		3310C117D1EC208A86DB8A5B2D2ADF98 /* MJPropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = 72176F30AD4C259AE9ED95A2AD84DB67 /* MJPropertyType.m */; };
-		3A4E507D98495566460EFF613EB4B2F2 /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 386F3C9A027974A17418EEC174B786EE /* NSString+MJExtension.m */; };
-		3C1B71222184D8A91DA6B5F098B000F4 /* FMDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 294B978C6D40EE4609A581872A27FE74 /* FMDatabase.h */; };
-		3C75307F9B2710C119815D6A10F45FBC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8709913C2E1FA25DBDD674D992CF19 /* Foundation.framework */; };
-		3D7AC2D49BE90B99F9238DB7FE357102 /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = F55CFB7F265CC24EB4091FC378885C33 /* MJExtensionConst.m */; };
-		400DE90757A8966C0B74D4D35E1BCDB0 /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = C659B61316FCF89111201BFF4DDE2725 /* MJFoundation.m */; };
-		4652D0B0438E253659E13475F5B4AF1B /* FMResultSet.h in Headers */ = {isa = PBXBuildFile; fileRef = CA5DC49BF5544BCE731030073C92C536 /* FMResultSet.h */; };
-		4ABEA7E8BFB3C3F3F18E75F153479DDC /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CCBAA11985E828F543460102FA2AA0 /* NSObject+MJProperty.m */; };
-		63E8CABE1C63257072D03F7153DB6145 /* MJPropertyKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 1824FA712D4F0F0BF1E983CE48F130DC /* MJPropertyKey.h */; };
-		675EDB02C5DC7CB3ECA5B24E3FE08BC5 /* FMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = 255FD4A22314A7B8A50A2E7DC761C810 /* FMDatabasePool.h */; };
-		69DB12AB604919497FF6628ED7614C80 /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 5636CBF669C66112A947A8209069CF64 /* NSObject+MJCoding.m */; };
-		6C56D5081C5CB0FB7A986408BCB2B62B /* MJFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 01671931C340207D71F1D1E780B27A51 /* MJFoundation.h */; };
-		6F12A1E3553D6E83E4710CC5DC0943F4 /* FMDB.h in Headers */ = {isa = PBXBuildFile; fileRef = F841D431AD90A198D447BB169D38F007 /* FMDB.h */; };
-		7CA68F099852530EAAA97E6EB243584E /* MJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 55819EE9F6E3DBBA89BD3A1E34EDF386 /* MJExtension.h */; };
-		861111C77EBBE39954C93EB292E3B2D9 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BE37BB2C03F623101C807199625F82 /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		A4121A9AAEFD228E3DB4CDFA63937D01 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC8EB9E622EA75EDB51EF5CE4E04D3 /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		A47F216E337038D00CB678EE24220A7C /* FMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = BD23DEFB00AE0B33B75F59F4241892A5 /* FMDatabaseAdditions.h */; };
-		A51A165A54C9FDA352A0AB211867B16E /* MJDictionaryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5188D2D577A292989B4365314B5652 /* MJDictionaryCache.m */; };
-		B098487A0E4E0FB8849A6C9483596985 /* NSObject+MJClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 64E284ED6853C3031AD87452CEBA7292 /* NSObject+MJClass.h */; };
-		B31B6B69210230674A3852F359A4F95E /* MJProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E5456C81F4DA40FE5BFF152A0CEA88F /* MJProperty.h */; };
-		B811A509AE4F9EA73590FBD9399A1B41 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8709913C2E1FA25DBDD674D992CF19 /* Foundation.framework */; };
-		BDDEB92540A6DEDCA752AC5A99C7956A /* NSObject+MJKeyValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E396A8DA4ECCA796A0F6E5112601343 /* NSObject+MJKeyValue.h */; };
-		BF09AFBD7656B3CE82089707F8292770 /* MJPropertyKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EE342E9CAED5175252A5A2859EBDB08 /* MJPropertyKey.m */; };
-		BF90B10A0B7903371C1795F27B7ADC18 /* NSObject+MJProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 137A40BAA6133744095610A4D647E867 /* NSObject+MJProperty.h */; };
-		C00F3C267B021783818B4175B478BC24 /* MJDictionaryCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 843B94B3A7EBC364DF06C0214F3B7E05 /* MJDictionaryCache.h */; };
-		D8F40267BAC550BE0A44B6E3DDC2D0E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8709913C2E1FA25DBDD674D992CF19 /* Foundation.framework */; };
-		DD950ED61B05983A035E73E4931141D8 /* MJExtension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 798A00D1736DF6F1A8C7065EA3FB1F3B /* MJExtension-dummy.m */; };
-		DDA08CEB1F71EE705409AAEE8FBB6691 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B14912269DEDAF9B78C66D2C91C7B62 /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		E31CC3C8C469A24D7E4F5771FE28C4D4 /* FMDatabaseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = D41EADD923722D40F6EFF847DD96D845 /* FMDatabaseQueue.h */; };
-		E59D3FA2BD0E9EA42B854290D297DD8E /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FF5E6EFBF8E368F6113CB824A203B1 /* NSObject+MJKeyValue.m */; };
-		E6771597B4E4523032B8779965EFE71C /* NSObject+MJClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FB30D99F321BC8EB667FABBA5EF147 /* NSObject+MJClass.m */; };
-		FA714A230928AC622B06BD1B3AD686DB /* MJExtensionConst.h in Headers */ = {isa = PBXBuildFile; fileRef = 133ECC6DB07AFDB4F0BF665B3E10A7FA /* MJExtensionConst.h */; };
+		015AD5E28A736D1C728E042A6612A33E /* FMResultSet.h in Headers */ = {isa = PBXBuildFile; fileRef = EDDE5709E604AE20DE3751FBC5363EBF /* FMResultSet.h */; };
+		01981499054F52505FFDB13E86D96F9B /* NSObject+MJClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D1EF3FFA7E80A8AF26A0B0532ECA1B64 /* NSObject+MJClass.m */; };
+		0229D51630FFF64D70BA55A56935CAF9 /* MJDictionaryCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CC7F0076BDC276647E743B2D1905CF0 /* MJDictionaryCache.h */; };
+		028DFCDEF888A5E72362FF753EC66F89 /* FMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = 19AA8B14EA387C44C9A3E877878B69F1 /* FMDatabasePool.h */; };
+		04291F27D4EAF5E0330E5F7F2EC66D0C /* FMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = B97827DF92A75A3DB9C3ED82ED90D571 /* FMDatabasePool.h */; };
+		0947919D3D53C13C37090B331733CA73 /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = C79A040F1426A56562094E6CEDD9210A /* NSObject+MJProperty.m */; };
+		0A971219056949895D26F44BD24EC2B2 /* MJProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FF45D54B54A4E2B620530671F307122 /* MJProperty.h */; };
+		0CB450CA99F9ABBD869F9BAE836F229F /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A3644CE7A1F76885DF40FF7ABF5AB6 /* NSObject+MJKeyValue.m */; };
+		0D985FB570B6934DECFBB6170EFC4665 /* FMDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 29B87961913AD78072AAF2F5EC72DF90 /* FMDatabase.h */; };
+		11F7542B7541D62BC9A04249D2CD5FC5 /* NSObject+MJClass.h in Headers */ = {isa = PBXBuildFile; fileRef = A4289FFCF48363D9C41F4608C1AB95A1 /* NSObject+MJClass.h */; };
+		16DAA8239C1B1DA906CAF5D8033574AC /* NSObject+MJCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = A27AC1672916F84852F20E9B6D925DFF /* NSObject+MJCoding.h */; };
+		1753FC809533D44BC4FE3E842C25D296 /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = F7FA0A7BB8D4490C8D5FC99C10113012 /* NSObject+MJCoding.m */; };
+		1ACA760E1DEDB965CD392AB4669A4718 /* FMDatabaseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = BCE31859A4165C53B768992B3575FECE /* FMDatabaseQueue.h */; };
+		1AE4E58E1E3328211346A540B953B0E8 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A21BFE384013BB348F3030E5E5EE35A /* NSObject+MJKeyValue.m */; };
+		1B58BCE4A7435DFE5567D8FA32B90EF1 /* MJPropertyType.h in Headers */ = {isa = PBXBuildFile; fileRef = 2410117F97DD268508BBBE00100BE87B /* MJPropertyType.h */; };
+		1B8EC278604F249D155F0114C47B0F61 /* MJExtensionConst.h in Headers */ = {isa = PBXBuildFile; fileRef = 044C60F063223B6D1F26C1F16A932080 /* MJExtensionConst.h */; };
+		1DAA8D38C735DC941F9F032DB38D097D /* NSObject+MJClass.h in Headers */ = {isa = PBXBuildFile; fileRef = C26BE96EAF9D4F12C0ADD4D6E9EAFA88 /* NSObject+MJClass.h */; };
+		1FC830EC3A396793978D700A3F8E782D /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 064F0ADA822BA0D8CCE51AA0376BFC15 /* NSString+MJExtension.m */; };
+		2202015F15B02F99727C15E5186B431B /* XGFMDBManagersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 99C85ABA43F79E09A7454D95C1021C1B /* XGFMDBManagersTests.m */; };
+		2C1B8A03B1FD6F2FA6264068220CDC71 /* MJPropertyType.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D988F386FB49643D44D0E5309261FA7 /* MJPropertyType.h */; };
+		310AD525E1E6334513EBBC3B84B121A3 /* MJFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = C1494A11F4FC2121C9FB2B4BE3578AC3 /* MJFoundation.h */; };
+		33191BB32C3D0ACC7D77532FEF727E41 /* FMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EB240E4DCB980A2AB8824B9BCF11F26 /* FMDatabaseAdditions.h */; };
+		335AC407EB1797E4B9705227CC915D3E /* MJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = FC59EC52A0FCD9E9354F4E35390C0EB6 /* MJExtension.h */; };
+		35AB5E617E4EDFCB8CBD925B7C3876AC /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D353F7E74247AFA22B15988904100E /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3BB7FBC4BB86CFA70E92B7EB84E24DC4 /* MJExtensionConst.h in Headers */ = {isa = PBXBuildFile; fileRef = C720654043F19BE9BAC23703D3E31ED3 /* MJExtensionConst.h */; };
+		3E503E02BD094650773A0BCD6FB186C7 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2045F04EC11CE334A62F2F6C2034D76D /* FMDatabaseAdditions.m */; };
+		3EFEB88AA2EE009653FB22350A8CDB56 /* XGKeyValueStore.h in Headers */ = {isa = PBXBuildFile; fileRef = BF1423FD83F7711DEC580FDD011B8ACC /* XGKeyValueStore.h */; };
+		3FA4A88488CC27822E9C5968B4DC0CAB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 128BD6C5D73570C1650F76792B04FA10 /* Foundation.framework */; };
+		3FC3AE2BE34D50482E0277A8D81405F3 /* MJPropertyType.h in Headers */ = {isa = PBXBuildFile; fileRef = ACF381FB12E93E93E53F10D8EB0472ED /* MJPropertyType.h */; };
+		43ED241A750FF5CAC81F367BF2ADB66E /* NSObject+MJKeyValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 85346921715689AD56D8F2443068655E /* NSObject+MJKeyValue.h */; };
+		455D9A18ABF7CBF95BCEC794858138F8 /* XGKeyValueItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CAB25BA5B79BE81D9256E9A83FCD7DB /* XGKeyValueItem.h */; };
+		45BFF541DC976349B84F6F25E9A044CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 128BD6C5D73570C1650F76792B04FA10 /* Foundation.framework */; };
+		465A0B012371D514D16A06EA23D3D8DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F11C47A081E0B1DAEF0C07DBA4658AF /* AppDelegate.m */; };
+		486272D6F14F7F4614022A29A572BFB9 /* MJDictionaryCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FCA79F26009C2EBAB073DC4A574172F /* MJDictionaryCache.h */; };
+		4CA6CD1508FA892B312C3F5BAA76C321 /* XGFMDBManagers-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8EC45D1AF4732C88CADCAA25BB152D /* XGFMDBManagers-dummy.m */; };
+		4E41E4C4A3AA21F72AE5719F3ED751D5 /* NSObject+MJKeyValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 6231B3B2EB94877338FFEF8104E06167 /* NSObject+MJKeyValue.h */; };
+		4E943D831F00BA446B65CEC835943898 /* MJFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 68684718C6830199E60F3F13179235E1 /* MJFoundation.h */; };
+		51E00143ECA8FFC92E2D6CF5ECE052C8 /* FMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 44FC8FB7CEB8B64C8E13C067495AF761 /* FMDatabaseAdditions.h */; };
+		5358C341C0562991C7005A42746EADAC /* FMDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = C93120D108AFEBB27B53119C870E6C7C /* FMDatabase.h */; };
+		56CB64994B2DD3B96943FBEDF68065F0 /* FMDatabaseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 00D36E02BA3F8869682FB6F3A384C5C3 /* FMDatabaseQueue.h */; };
+		57A423C018A5039AF9C689EDBA9FA73F /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 247106249EFAAC5A1DA58B5B534A096B /* MJFoundation.m */; };
+		5AC768F593B19AC77B33F2BCDE7C7383 /* MJFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CA27D9967112417E4B7F117160BE2FB /* MJFoundation.h */; };
+		5D6B947BFC72146DBD9ADC18F35A68E3 /* NSObject+MJClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 62B92C345C2C8194A73F1E1C6CFEC857 /* NSObject+MJClass.h */; };
+		60A9D59521D9655067A286AE2CEFAFF7 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = A0AD2C9258AFE95955985954CA6EC87B /* FMDatabasePool.m */; };
+		637A3B7ADC80CEF9E1BC14AF097478F5 /* MJPropertyKey.h in Headers */ = {isa = PBXBuildFile; fileRef = A578E5D4F61B9880D3C9B2F23E335DBB /* MJPropertyKey.h */; };
+		66CC8772DE4D77307F77E55235DCEBE1 /* FMDB.h in Headers */ = {isa = PBXBuildFile; fileRef = DF91D26A27D6B834D9305D2BBD770AC0 /* FMDB.h */; };
+		690628209D1FD73F104EF6EE8783867F /* FMResultSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FAA5D25D9FEC8313623E5718EA37259 /* FMResultSet.h */; };
+		6C54A70231D65CD032A5562371E04ECF /* FMResultSet.h in Headers */ = {isa = PBXBuildFile; fileRef = E3162DF2EB272DD1C594C726525DDBF6 /* FMResultSet.h */; };
+		6F164D841DE7BD9DD78DA622F0B0F6A2 /* NSObject+MJProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 68C5D7321D00BFFE609EF9DB8EB14CB3 /* NSObject+MJProperty.h */; };
+		70793ED17B0BB2A6CE674A57D4002534 /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6928BFF33A9D0AF614B93E63019E82C4 /* MJFoundation.m */; };
+		75E21DBE5595229E68FF28D62819F90F /* MJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A068AB138073D17CC8891F9FC0D1FF7 /* MJExtension.h */; };
+		7A356F30CDCEC5A4EE7FEBE286671235 /* MyModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E6CB1D5EC6A6CA45FFCC0DAEA6D2FD /* MyModel.h */; };
+		7B155512EECC297462F1FF73390659B4 /* FMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = E1673806CE9FC49925CB10B76C35FA3A /* FMDatabasePool.h */; };
+		7C9BE8D3085879F3C4EDA150181EC97D /* NSObject+MJProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 60569FE42C62952502130016CABEFA4D /* NSObject+MJProperty.h */; };
+		7FFDA83F5A5D7A3B653DCD65A0C62FD1 /* FMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 192442AE5E337DC38E83782020D93A17 /* FMDatabaseAdditions.h */; };
+		849FE649BBD38C7D125BDE492E9864A0 /* MJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 90CF4CFB5A7BFDFC546CAEAAB6DD8A3D /* MJExtension.h */; };
+		852717DFAE38DA3F73757BA91D5D921B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C625F2F067318EC82882CC0030E91FA2 /* ViewController.m */; };
+		892512D29A21B52DD0142763BCBFBC47 /* MJPropertyKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 4397D80A08FFBE9CA9827D71AF9B5DB8 /* MJPropertyKey.h */; };
+		894AAD68CB7A15E36AE6FC1F7572695C /* NSObject+MJClass.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE92B0C45B1913ADC0A5F45BC228F95 /* NSObject+MJClass.m */; };
+		8A31057C1C32F9CF5D54AADEC45F8305 /* FMDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 1293E7F382FA662251ED610C62FBB1B3 /* FMDB.h */; };
+		8A5AFEE271AB65F8E584149425A8A050 /* NSString+MJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = E81E042E6CB624FE1004AD6D57A22BE4 /* NSString+MJExtension.h */; };
+		8B70A533CC0046106187B54A671A69B6 /* XGFMDBTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCD2F76029888325DECBF655E1D1773 /* XGFMDBTool.m */; };
+		8BBD5C6446F78E9B19C11FE085EF187E /* NSObject+MJClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 503B07351BCBCD37699116E3C5E83502 /* NSObject+MJClass.h */; };
+		8C40F5AB8F84EADAE6BE0749D7BA2728 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C8E5009A4D6D305295DBEF909AD076 /* FMDatabaseQueue.m */; };
+		8F7092A675F080D7E186ED9985E3C25E /* FMDatabaseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = F44D61F849CB8F608197370D836F4525 /* FMDatabaseQueue.h */; };
+		8FF629A3ADBE669F95C3FA9EFD827B60 /* FMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0136F2535D9276E017312CDE6E6668AE /* FMDatabaseAdditions.h */; };
+		900F763BD9097E0294B9F338E3DB1F7C /* MJPropertyKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B5F6797215AACC9D205A5F42B83A98 /* MJPropertyKey.m */; };
+		90D859299F6720B7F010EAD72AE79AF8 /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E5D8D01AE72D13347B0302453CBD6D /* NSObject+MJCoding.m */; };
+		936E841C6EC998BFF52FB5E6FE9E8C1A /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BB233A2B567AB4194C8B1C3D074FF6 /* NSObject+MJProperty.m */; };
+		93B608D80A5213C52A790F1C5C21B838 /* XGFMDBTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 37CCB6910FD11AF18745D4FC850AC798 /* XGFMDBTool.h */; };
+		968FD1B7E7227C395BB809FADECFABAD /* MJPropertyKey.m in Sources */ = {isa = PBXBuildFile; fileRef = D418A2EDA3E0D8DAAF1896F0F3EC9CD1 /* MJPropertyKey.m */; };
+		975DBD0BA7309F9DA2B9A0F19E3AB67F /* NSObject+MJKeyValue.h in Headers */ = {isa = PBXBuildFile; fileRef = E4E03A834A5E4D3BFD5673138E4253AF /* NSObject+MJKeyValue.h */; };
+		978DF5B812AA2D56585DB9F8D404548A /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A808A610CCBF515EEE496DBC82107C83 /* NSString+MJExtension.m */; };
+		9AD5DCD77ABE201619A8516A2640A313 /* MJExtensionConst.h in Headers */ = {isa = PBXBuildFile; fileRef = F0A751B3ABDDDA311B871D3ED189896D /* MJExtensionConst.h */; };
+		9BB4794E37CF6F7590E4829BF01F5D4D /* MJExtensionConst.h in Headers */ = {isa = PBXBuildFile; fileRef = E231ABF18BF1677E2DFFF7FD73973CBE /* MJExtensionConst.h */; };
+		9D3D50E4CFEE03B156CE1BF89E76D78E /* XGKeyValueStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E23279FD9BB283909917492F395CE9 /* XGKeyValueStore.m */; };
+		9E5B7C19D45DDFB7B15EEF0C8FAE0D89 /* FMDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = E6B125344E3FC40791AEA7408F006971 /* FMDatabase.h */; };
+		A26F7C8859872C33933B599A2FEF8B65 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA007F1466A9109B41F42E2480DEDF0 /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		AA4041A8766299479277B97AA004D68E /* MJPropertyKey.h in Headers */ = {isa = PBXBuildFile; fileRef = E53C15A334253E75D48187587CDB52D5 /* MJPropertyKey.h */; };
+		AD6FD00FE26D041BA6836276AC860B4A /* NSObject+MJCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 768F825D07B56D48EA302C73B24CAA19 /* NSObject+MJCoding.h */; };
+		ADBD950606A035BADF2287CD92E3B4A8 /* NSObject+MJCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CA122A8BF83F2E9346AF2827D320245 /* NSObject+MJCoding.h */; };
+		B0EE636A27A7FF158AE5540F3833870B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 128BD6C5D73570C1650F76792B04FA10 /* Foundation.framework */; };
+		B34B7E4B2CAA10C59D276516DF60873F /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AA0A8B37480B355020C1310379716D40 /* Pods-dummy.m */; };
+		B543D2A0C7F319845839F428AF7A7F12 /* MJPropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1FFADD2C468E2775F8B10E8D20830D /* MJPropertyType.m */; };
+		B82B44221B543848F498C4BC2711E8F2 /* NSString+MJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 86695C689D90ED31A2B307CFE4B005DA /* NSString+MJExtension.h */; };
+		B951C4063C6D303A428FBA19935C6CDF /* MJPropertyKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AD834AA1653B84A67FDBA72F671D37B /* MJPropertyKey.h */; };
+		BB749F076859C0CD6C0F278FDF9A60CF /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9C69BB8C0B2CB565BA8F853E69E83B /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		BC297BF310C571E84177C74177CC1600 /* MJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B3586E6AA65F20BF9A9EA945BDD58F /* MJExtension.h */; };
+		BC57DEB06BE8DB68ED539B650C1E697E /* MJPropertyType.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B884631012A26F4755338549F7C8689 /* MJPropertyType.h */; };
+		BCA2CF63AE1F7AC10978CFBEC2776015 /* MyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C32967BBA784DFE602F83F53A717F975 /* MyModel.m */; };
+		BF392915740E6223EE419167A2EAF20F /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFB2C91C6395CDD96BD8B6A39407D17 /* Pods-dummy.m */; };
+		C15E76FE3D2A14962408B8E8076A87F5 /* MJDictionaryCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 83AD2652E5C2FCF428F568F6662F9752 /* MJDictionaryCache.h */; };
+		C3E4BE3C8E4640E5CF53DE19C824CD26 /* NSObject+MJKeyValue.h in Headers */ = {isa = PBXBuildFile; fileRef = DC79DD1171ADDCA081BDFC54D80CF7E8 /* NSObject+MJKeyValue.h */; };
+		C45BB01724362D8D25E29F7DB483D9CC /* AppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = C3741BA5FCA6F8D874A103796ADCAE4E /* AppDelegate.h */; };
+		C61E85C4F73CE2970C31FBDB82091A86 /* XGKeyValueItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E0AF6E730BFE192342154263AD5F828C /* XGKeyValueItem.m */; };
+		C729DF52C39CFFCAE3BDA15BA950630F /* FMDB.h in Headers */ = {isa = PBXBuildFile; fileRef = F741A4D14A153E8CEC33839434B4227E /* FMDB.h */; };
+		C859870082A0D5136ECE87BCF8FEB421 /* MJDictionaryCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EAA573CDDABC79D9718424CE7918D06 /* MJDictionaryCache.h */; };
+		CAC4C11390875DEEF21CB9ADFA438ED1 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E3F580624C24A45E086CB088AEB4C7 /* FMDatabase.m */; };
+		CC5298B39A339ED7AE9208B7D5F8564F /* FMDatabaseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = F87F65B310ECDFBE0D7D8CD8B4999219 /* FMDatabaseQueue.h */; };
+		CD1129F7A14EFF653197E7F1BBEA97C2 /* FMDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 5802A32EDF726C356F135241DEFAE565 /* FMDatabase.h */; };
+		D152F9EBF2EB0126C3B8B3E2A15832D9 /* FMDB-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 089BB63B6290BAC2F3B8CE57A9A84DA2 /* FMDB-dummy.m */; };
+		D1F979D01BF7338C2D06E2EF8407BA83 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 88990078FF6B3F22869781D885DBD20C /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D2E347C13EA33D053B93A3511B0B9A8D /* NSObject+MJProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B3F3E1E3905D1449A935F37535118C2 /* NSObject+MJProperty.h */; };
+		D41D86AF553D53EF73F5D55A3FE1C3CB /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3FEADDBDBBB5D17BA24CB149666E01 /* FMResultSet.m */; };
+		D5AF35C789E29643739F040A35F7E8FC /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = ECAAE4C00DFDFFB00370F2C651BF5388 /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		DB7A2E448E0F8E90390BAAB2F2029294 /* FMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = ECBC293C836DE99199C934155D8A2F60 /* FMDatabasePool.h */; };
+		DD5C6BB2D18686D58D01A42FEEDACE47 /* MJProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 98D4802191041F729D46906E216B1F85 /* MJProperty.h */; };
+		DD648401E86B381666C7355F11779EC9 /* MJPropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = E62BD32070ECBCD9FA6A488B9BE6A470 /* MJPropertyType.m */; };
+		DDC2B23F0749DB95EAB7E53832115F58 /* XGModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E464B602DC28C9D608BAEEB710C257E2 /* XGModel.m */; };
+		DE30FB1DC414063D87EF416110CE5167 /* MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 1089A2E7611AEE81E608CE64EE3D9F0B /* MJProperty.m */; };
+		DF64B5162882DB395D656B7F9753D899 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 128BD6C5D73570C1650F76792B04FA10 /* Foundation.framework */; };
+		E07897E17F357706FF0B0A1B41910B0D /* NSString+MJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 3892A356BA3924B44EB39F55F017CB77 /* NSString+MJExtension.h */; };
+		E1120C534072F7B4180FDF2B3875F449 /* XGFMItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 87EB568421766B11081A0EE3FEBAA241 /* XGFMItem.m */; };
+		E3457495D2A0CF647B49F86416C17203 /* MJFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EF69C80784DA831DE2EAA0DFD3C0355 /* MJFoundation.h */; };
+		E8E94D184BD55D6D3BD4E3B77B9F6AFE /* MJExtension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF2A7DD6B479B8A457B8754DC8A4BD /* MJExtension-dummy.m */; };
+		E9179248CEC72E7441B562EF38983588 /* NSObject+MJProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 27A128EF9F536CEE00162BC096FCE634 /* NSObject+MJProperty.h */; };
+		E9621C8ECDB08B06B41A6796A9CCD896 /* MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 442426295BBAB10142E625CF55CFA32A /* MJProperty.m */; };
+		EC1B4A2B8927DD113A73D1F04E630819 /* FMDB-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AF1B6FAAD0A1398303EA41EAEF0752 /* FMDB-dummy.m */; };
+		EC39E8923629CD31437A98A30F2E9613 /* XGModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AB46B5631E9ADA4BA95A8F0A4BA9C42 /* XGModel.h */; };
+		EF7787144F740C05370D5D5F9388EC27 /* ViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A6BC9C293C24BAB2E4A00D6899293C4 /* ViewController.h */; };
+		F026700577B30A6D79713B4320C4AB15 /* MJDictionaryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D724A45574150B573A48953F8E9520F1 /* MJDictionaryCache.m */; };
+		F1A464233C87A83A50D00DEA60732CFC /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4060BC83DA6BE40C7B4BF852353301 /* MJExtensionConst.m */; };
+		F1BA565A1B6B203496DB39CFF5F150B2 /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 08901D1764D3FE4827A7F9959E83C32A /* MJExtensionConst.m */; };
+		F3B162D4F56AD01490BBB8F91F038CE0 /* MJProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 6656DE25C58754BB7E6749397B75C1DE /* MJProperty.h */; };
+		F4D060774992CC1148383E89F87F6D7D /* FMResultSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A99075DCFAF4EF7E13D0A9AE88507D4 /* FMResultSet.h */; };
+		F83385782975AC7CD101CF7D973B8370 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E33D2370C8AE743286494BFF1CFBED6B /* main.m */; };
+		FB2741F3DF0196B5ADC04483CBC8568F /* XGFMItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 151A581BEDC9F28BAB16F78F7EF5071C /* XGFMItem.h */; };
+		FC1294AB0878D166D2A5B3255937AD75 /* MJDictionaryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0090B249F5EC616EEA0950F5C3CA8716 /* MJDictionaryCache.m */; };
+		FD4DB7B71D3766E3D79770C74CB7D1B8 /* NSObject+MJCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = F1A38642D0F94AE945F0355AF4DC69EE /* NSObject+MJCoding.h */; };
+		FDC8152B9B136C0F555FADBB54FC50C9 /* MJProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 185064DE67117CD0510DAC1FD2B20648 /* MJProperty.h */; };
+		FF5D5A6298EEFBE55E35E0CD08C2CAEA /* NSString+MJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 141BFAEF00A42A399EEAE3AA4B12ECE4 /* NSString+MJExtension.h */; };
+		FFA806043877C510B29B465AFAFE1CB2 /* FMDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C1424A2E1EA503354EA87190CBDEB9E /* FMDB.h */; };
+		FFD9BB0F9788DD7E800F9102FAAA6B9E /* MJExtension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 77761FBABAC58BFA4BF6025ED727B594 /* MJExtension-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		59BB7D12AEC01E21E1B77A9B2245993C /* PBXContainerItemProxy */ = {
+		31F079718CDD4F6C88509C3E4E1A6751 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2CEE0C0DE50EB8F675288820D928619C;
-			remoteInfo = MJExtension;
-		};
-		C2234170A4B22E93FECAAB51CAEDB32A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5E2F52D234CB994148A837762B2C81D1;
+			remoteGlobalIDString = ADDD45A17C9934D3BF2EF7A6758DF7A5;
 			remoteInfo = FMDB;
+		};
+		4743D0F8E83B944CAB41A7D8695D0E28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6356FE5AF6BFA0AAD8222ACE99D6652;
+			remoteInfo = XGFMDBManagers;
+		};
+		8721CA30EB96BA8918A16390148B7C15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07D027052539933EEB29DF259EB7551E;
+			remoteInfo = MJExtension;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01671931C340207D71F1D1E780B27A51 /* MJFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJFoundation.h; path = MJExtension/MJFoundation.h; sourceTree = "<group>"; };
-		097EE3F7F1152765756FB1A708CFE215 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		133ECC6DB07AFDB4F0BF665B3E10A7FA /* MJExtensionConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJExtensionConst.h; path = MJExtension/MJExtensionConst.h; sourceTree = "<group>"; };
-		137A40BAA6133744095610A4D647E867 /* NSObject+MJProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJProperty.h"; path = "MJExtension/NSObject+MJProperty.h"; sourceTree = "<group>"; };
+		0090B249F5EC616EEA0950F5C3CA8716 /* MJDictionaryCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJDictionaryCache.m; path = MJExtension/MJDictionaryCache.m; sourceTree = "<group>"; };
+		00D36E02BA3F8869682FB6F3A384C5C3 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = XGFMDBManagers/Pods/Headers/Public/FMDB/FMDatabaseQueue.h; sourceTree = "<group>"; };
+		0136F2535D9276E017312CDE6E6668AE /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = XGFMDBManagers/Pods/FMDB/src/fmdb/FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		044C60F063223B6D1F26C1F16A932080 /* MJExtensionConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJExtensionConst.h; path = XGFMDBManagers/Pods/MJExtension/MJExtension/MJExtensionConst.h; sourceTree = "<group>"; };
+		064F0ADA822BA0D8CCE51AA0376BFC15 /* NSString+MJExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MJExtension.m"; path = "MJExtension/NSString+MJExtension.m"; sourceTree = "<group>"; };
+		07C8E5009A4D6D305295DBEF909AD076 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = XGFMDBManagers/Pods/FMDB/src/fmdb/FMDatabaseQueue.m; sourceTree = "<group>"; };
+		08901D1764D3FE4827A7F9959E83C32A /* MJExtensionConst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJExtensionConst.m; path = MJExtension/MJExtensionConst.m; sourceTree = "<group>"; };
+		089BB63B6290BAC2F3B8CE57A9A84DA2 /* FMDB-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FMDB-dummy.m"; path = "XGFMDBManagers/Pods/Target Support Files/FMDB/FMDB-dummy.m"; sourceTree = "<group>"; };
+		0FF45D54B54A4E2B620530671F307122 /* MJProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJProperty.h; path = XGFMDBManagers/Pods/MJExtension/MJExtension/MJProperty.h; sourceTree = "<group>"; };
+		1089A2E7611AEE81E608CE64EE3D9F0B /* MJProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJProperty.m; path = MJExtension/MJProperty.m; sourceTree = "<group>"; };
+		128BD6C5D73570C1650F76792B04FA10 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		1293E7F382FA662251ED610C62FBB1B3 /* FMDB.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = src/fmdb/FMDB.h; sourceTree = "<group>"; };
+		141BFAEF00A42A399EEAE3AA4B12ECE4 /* NSString+MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MJExtension.h"; path = "XGFMDBManagers/Pods/Headers/Private/MJExtension/NSString+MJExtension.h"; sourceTree = "<group>"; };
+		151A581BEDC9F28BAB16F78F7EF5071C /* XGFMItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XGFMItem.h; path = XGFMDBManagers/XGFMDBManagers/XGDB/XGFMItem.h; sourceTree = "<group>"; };
 		15A529C27057E4A57D259CBC6E6CE49C /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		1824FA712D4F0F0BF1E983CE48F130DC /* MJPropertyKey.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJPropertyKey.h; path = MJExtension/MJPropertyKey.h; sourceTree = "<group>"; };
-		18D6CAC333D828D46FB12AB32ED49D96 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = src/fmdb/FMDatabaseAdditions.m; sourceTree = "<group>"; };
-		1DCD44ECD37CE3800D21CFE26EE03A31 /* MJExtension-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "MJExtension-Private.xcconfig"; sourceTree = "<group>"; };
-		1EE342E9CAED5175252A5A2859EBDB08 /* MJPropertyKey.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJPropertyKey.m; path = MJExtension/MJPropertyKey.m; sourceTree = "<group>"; };
-		1F8709913C2E1FA25DBDD674D992CF19 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		21FB30D99F321BC8EB667FABBA5EF147 /* NSObject+MJClass.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJClass.m"; path = "MJExtension/NSObject+MJClass.m"; sourceTree = "<group>"; };
-		255FD4A22314A7B8A50A2E7DC761C810 /* FMDatabasePool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = src/fmdb/FMDatabasePool.h; sourceTree = "<group>"; };
-		258C31C86B3738643AFA78ED79A9D22D /* FMDatabasePool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = src/fmdb/FMDatabasePool.m; sourceTree = "<group>"; };
-		294B978C6D40EE4609A581872A27FE74 /* FMDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = src/fmdb/FMDatabase.h; sourceTree = "<group>"; };
-		32BC3A0EE7C12FD17FA211402986186D /* FMDB-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "FMDB-Private.xcconfig"; sourceTree = "<group>"; };
-		386F3C9A027974A17418EEC174B786EE /* NSString+MJExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MJExtension.m"; path = "MJExtension/NSString+MJExtension.m"; sourceTree = "<group>"; };
-		3E396A8DA4ECCA796A0F6E5112601343 /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJKeyValue.h"; path = "MJExtension/NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
-		40B99D16821D1C6011CC632EAD2051A6 /* MJPropertyType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJPropertyType.h; path = MJExtension/MJPropertyType.h; sourceTree = "<group>"; };
-		43CCBAA11985E828F543460102FA2AA0 /* NSObject+MJProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJProperty.m"; path = "MJExtension/NSObject+MJProperty.m"; sourceTree = "<group>"; };
-		44984FB4E4D424793119D68443594858 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		55819EE9F6E3DBBA89BD3A1E34EDF386 /* MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJExtension.h; path = MJExtension/MJExtension.h; sourceTree = "<group>"; };
-		5636CBF669C66112A947A8209069CF64 /* NSObject+MJCoding.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJCoding.m"; path = "MJExtension/NSObject+MJCoding.m"; sourceTree = "<group>"; };
-		5A9126260E7E882805B209C5B64986BB /* MJExtension.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MJExtension.xcconfig; sourceTree = "<group>"; };
-		5E5456C81F4DA40FE5BFF152A0CEA88F /* MJProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJProperty.h; path = MJExtension/MJProperty.h; sourceTree = "<group>"; };
-		5FD83DABFE7EA851C4EA6948F26BDB81 /* libMJExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMJExtension.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		176962CE91CFEFAA7C6E7CAD10F3A192 /* MJExtension.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MJExtension.xcconfig; sourceTree = "<group>"; };
+		185064DE67117CD0510DAC1FD2B20648 /* MJProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJProperty.h; path = XGFMDBManagers/Pods/Headers/Public/MJExtension/MJProperty.h; sourceTree = "<group>"; };
+		192442AE5E337DC38E83782020D93A17 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = src/fmdb/FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		19AA8B14EA387C44C9A3E877878B69F1 /* FMDatabasePool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = src/fmdb/FMDatabasePool.h; sourceTree = "<group>"; };
+		1EB240E4DCB980A2AB8824B9BCF11F26 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = XGFMDBManagers/Pods/Headers/Private/FMDB/FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		2045F04EC11CE334A62F2F6C2034D76D /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = XGFMDBManagers/Pods/FMDB/src/fmdb/FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		2410117F97DD268508BBBE00100BE87B /* MJPropertyType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJPropertyType.h; path = XGFMDBManagers/Pods/Headers/Public/MJExtension/MJPropertyType.h; sourceTree = "<group>"; };
+		247106249EFAAC5A1DA58B5B534A096B /* MJFoundation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJFoundation.m; path = XGFMDBManagers/Pods/MJExtension/MJExtension/MJFoundation.m; sourceTree = "<group>"; };
+		27A128EF9F536CEE00162BC096FCE634 /* NSObject+MJProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJProperty.h"; path = "XGFMDBManagers/Pods/MJExtension/MJExtension/NSObject+MJProperty.h"; sourceTree = "<group>"; };
+		29B87961913AD78072AAF2F5EC72DF90 /* FMDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = XGFMDBManagers/Pods/Headers/Private/FMDB/FMDatabase.h; sourceTree = "<group>"; };
+		2AD834AA1653B84A67FDBA72F671D37B /* MJPropertyKey.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJPropertyKey.h; path = XGFMDBManagers/Pods/Headers/Private/MJExtension/MJPropertyKey.h; sourceTree = "<group>"; };
+		2AFB2C91C6395CDD96BD8B6A39407D17 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-dummy.m"; path = "XGFMDBManagers/Pods/Target Support Files/Pods/Pods-dummy.m"; sourceTree = "<group>"; };
+		2C336EA5DC25B4D4A3B7113D197DA085 /* libFMDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFMDB.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CA122A8BF83F2E9346AF2827D320245 /* NSObject+MJCoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJCoding.h"; path = "XGFMDBManagers/Pods/Headers/Public/MJExtension/NSObject+MJCoding.h"; sourceTree = "<group>"; };
+		2D9C69BB8C0B2CB565BA8F853E69E83B /* FMResultSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = src/fmdb/FMResultSet.m; sourceTree = "<group>"; };
+		2EF69C80784DA831DE2EAA0DFD3C0355 /* MJFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJFoundation.h; path = XGFMDBManagers/Pods/MJExtension/MJExtension/MJFoundation.h; sourceTree = "<group>"; };
+		32E6CB1D5EC6A6CA45FFCC0DAEA6D2FD /* MyModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MyModel.h; path = XGFMDBManagers/XGFMDBManagers/MyModel.h; sourceTree = "<group>"; };
+		37CCB6910FD11AF18745D4FC850AC798 /* XGFMDBTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XGFMDBTool.h; path = XGFMDBManagers/XGFMDBManagers/XGDB/XGFMDBTool.h; sourceTree = "<group>"; };
+		3892A356BA3924B44EB39F55F017CB77 /* NSString+MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MJExtension.h"; path = "XGFMDBManagers/Pods/MJExtension/MJExtension/NSString+MJExtension.h"; sourceTree = "<group>"; };
+		3A1BA8EF327315DB6C6E360868DD98E6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CBF2A7DD6B479B8A457B8754DC8A4BD /* MJExtension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MJExtension-dummy.m"; sourceTree = "<group>"; };
+		41D353F7E74247AFA22B15988904100E /* FMDatabase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = src/fmdb/FMDatabase.m; sourceTree = "<group>"; };
+		4397D80A08FFBE9CA9827D71AF9B5DB8 /* MJPropertyKey.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJPropertyKey.h; path = XGFMDBManagers/Pods/MJExtension/MJExtension/MJPropertyKey.h; sourceTree = "<group>"; };
+		442426295BBAB10142E625CF55CFA32A /* MJProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJProperty.m; path = XGFMDBManagers/Pods/MJExtension/MJExtension/MJProperty.m; sourceTree = "<group>"; };
+		44FC8FB7CEB8B64C8E13C067495AF761 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = XGFMDBManagers/Pods/Headers/Public/FMDB/FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		46E23279FD9BB283909917492F395CE9 /* XGKeyValueStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XGKeyValueStore.m; path = XGFMDBManagers/XGFMDBManagers/XGDB/XGKeyValueStore.m; sourceTree = "<group>"; };
+		4AB46B5631E9ADA4BA95A8F0A4BA9C42 /* XGModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XGModel.h; path = XGFMDBManagers/XGFMDBManagers/XGModel.h; sourceTree = "<group>"; };
+		4B884631012A26F4755338549F7C8689 /* MJPropertyType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJPropertyType.h; path = XGFMDBManagers/Pods/Headers/Private/MJExtension/MJPropertyType.h; sourceTree = "<group>"; };
+		4C1FFADD2C468E2775F8B10E8D20830D /* MJPropertyType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJPropertyType.m; path = XGFMDBManagers/Pods/MJExtension/MJExtension/MJPropertyType.m; sourceTree = "<group>"; };
+		4CA27D9967112417E4B7F117160BE2FB /* MJFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJFoundation.h; path = XGFMDBManagers/Pods/Headers/Private/MJExtension/MJFoundation.h; sourceTree = "<group>"; };
+		4CEE4375374E957A3FA0E0A8B588EAB2 /* FMDB-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "FMDB-Private.xcconfig"; sourceTree = "<group>"; };
+		4EAA573CDDABC79D9718424CE7918D06 /* MJDictionaryCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJDictionaryCache.h; path = XGFMDBManagers/Pods/Headers/Private/MJExtension/MJDictionaryCache.h; sourceTree = "<group>"; };
+		503B07351BCBCD37699116E3C5E83502 /* NSObject+MJClass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJClass.h"; path = "XGFMDBManagers/Pods/Headers/Public/MJExtension/NSObject+MJClass.h"; sourceTree = "<group>"; };
+		50B3586E6AA65F20BF9A9EA945BDD58F /* MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJExtension.h; path = XGFMDBManagers/Pods/Headers/Private/MJExtension/MJExtension.h; sourceTree = "<group>"; };
+		52BA61F0569D5F85005B37AA059CC857 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		544094F0A0EF7232A28F3626B7DA4BEE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		57A3644CE7A1F76885DF40FF7ABF5AB6 /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJKeyValue.m"; path = "XGFMDBManagers/Pods/MJExtension/MJExtension/NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
+		5802A32EDF726C356F135241DEFAE565 /* FMDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = XGFMDBManagers/Pods/FMDB/src/fmdb/FMDatabase.h; sourceTree = "<group>"; };
+		5C5ED963CF6011F70ABEF21500FE1639 /* libMJExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMJExtension.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CC7F0076BDC276647E743B2D1905CF0 /* MJDictionaryCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJDictionaryCache.h; path = XGFMDBManagers/Pods/MJExtension/MJExtension/MJDictionaryCache.h; sourceTree = "<group>"; };
+		60569FE42C62952502130016CABEFA4D /* NSObject+MJProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJProperty.h"; path = "XGFMDBManagers/Pods/Headers/Private/MJExtension/NSObject+MJProperty.h"; sourceTree = "<group>"; };
+		60D281CD209F9828D0ACFC7ABEACC2A9 /* XGFMDBManagers-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XGFMDBManagers-prefix.pch"; sourceTree = "<group>"; };
+		61B5F6797215AACC9D205A5F42B83A98 /* MJPropertyKey.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJPropertyKey.m; path = MJExtension/MJPropertyKey.m; sourceTree = "<group>"; };
+		6231B3B2EB94877338FFEF8104E06167 /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJKeyValue.h"; path = "XGFMDBManagers/Pods/Headers/Private/MJExtension/NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
+		62B92C345C2C8194A73F1E1C6CFEC857 /* NSObject+MJClass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJClass.h"; path = "XGFMDBManagers/Pods/Headers/Private/MJExtension/NSObject+MJClass.h"; sourceTree = "<group>"; };
 		641AE05DD55E5E6AC1590CD7B4A18F97 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		64E284ED6853C3031AD87452CEBA7292 /* NSObject+MJClass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJClass.h"; path = "MJExtension/NSObject+MJClass.h"; sourceTree = "<group>"; };
-		6B14912269DEDAF9B78C66D2C91C7B62 /* FMResultSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = src/fmdb/FMResultSet.m; sourceTree = "<group>"; };
-		72176F30AD4C259AE9ED95A2AD84DB67 /* MJPropertyType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJPropertyType.m; path = MJExtension/MJPropertyType.m; sourceTree = "<group>"; };
-		76F80F0E19807AF33F1A5EF02CE3E8A5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		77E847D94FCF2FD6C0331470F05C1AF7 /* MJExtension-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MJExtension-prefix.pch"; sourceTree = "<group>"; };
-		798A00D1736DF6F1A8C7065EA3FB1F3B /* MJExtension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MJExtension-dummy.m"; sourceTree = "<group>"; };
-		814E55961A4B38569F37A873EF5F64D2 /* NSString+MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MJExtension.h"; path = "MJExtension/NSString+MJExtension.h"; sourceTree = "<group>"; };
-		83FF5E6EFBF8E368F6113CB824A203B1 /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJKeyValue.m"; path = "MJExtension/NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
-		843B94B3A7EBC364DF06C0214F3B7E05 /* MJDictionaryCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJDictionaryCache.h; path = MJExtension/MJDictionaryCache.h; sourceTree = "<group>"; };
-		8790FBC9E23336E7BC1432E2505BE6B8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		A58D05C39176D3DE5C5477FB0B81A207 /* FMDB-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FMDB-prefix.pch"; sourceTree = "<group>"; };
-		AD29FFAB95DD0F02450766CE73277A97 /* MJProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJProperty.m; path = MJExtension/MJProperty.m; sourceTree = "<group>"; };
+		6656DE25C58754BB7E6749397B75C1DE /* MJProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJProperty.h; path = XGFMDBManagers/Pods/Headers/Private/MJExtension/MJProperty.h; sourceTree = "<group>"; };
+		676EFE06737D8C2F202940DDD9376CBB /* XGFMDBManagers-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "XGFMDBManagers-Private.xcconfig"; sourceTree = "<group>"; };
+		6829F6D0C3D24DB6988DD4A9F6638C20 /* MJExtension-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MJExtension-prefix.pch"; sourceTree = "<group>"; };
+		68684718C6830199E60F3F13179235E1 /* MJFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJFoundation.h; path = MJExtension/MJFoundation.h; sourceTree = "<group>"; };
+		68C5D7321D00BFFE609EF9DB8EB14CB3 /* NSObject+MJProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJProperty.h"; path = "MJExtension/NSObject+MJProperty.h"; sourceTree = "<group>"; };
+		6928BFF33A9D0AF614B93E63019E82C4 /* MJFoundation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJFoundation.m; path = MJExtension/MJFoundation.m; sourceTree = "<group>"; };
+		6A21BFE384013BB348F3030E5E5EE35A /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJKeyValue.m"; path = "MJExtension/NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
+		6B3F3E1E3905D1449A935F37535118C2 /* NSObject+MJProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJProperty.h"; path = "XGFMDBManagers/Pods/Headers/Public/MJExtension/NSObject+MJProperty.h"; sourceTree = "<group>"; };
+		6C1424A2E1EA503354EA87190CBDEB9E /* FMDB.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = XGFMDBManagers/Pods/Headers/Public/FMDB/FMDB.h; sourceTree = "<group>"; };
+		6DA007F1466A9109B41F42E2480DEDF0 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = src/fmdb/FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		6F4060BC83DA6BE40C7B4BF852353301 /* MJExtensionConst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJExtensionConst.m; path = XGFMDBManagers/Pods/MJExtension/MJExtension/MJExtensionConst.m; sourceTree = "<group>"; };
+		6FCA79F26009C2EBAB073DC4A574172F /* MJDictionaryCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJDictionaryCache.h; path = XGFMDBManagers/Pods/Headers/Public/MJExtension/MJDictionaryCache.h; sourceTree = "<group>"; };
+		768F825D07B56D48EA302C73B24CAA19 /* NSObject+MJCoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJCoding.h"; path = "MJExtension/NSObject+MJCoding.h"; sourceTree = "<group>"; };
+		77761FBABAC58BFA4BF6025ED727B594 /* MJExtension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "MJExtension-dummy.m"; path = "XGFMDBManagers/Pods/Target Support Files/MJExtension/MJExtension-dummy.m"; sourceTree = "<group>"; };
+		77E5D8D01AE72D13347B0302453CBD6D /* NSObject+MJCoding.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJCoding.m"; path = "MJExtension/NSObject+MJCoding.m"; sourceTree = "<group>"; };
+		79A4A50A3A425CA2B72FF405912E3A8D /* libXGFMDBManagers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libXGFMDBManagers.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		79E3F580624C24A45E086CB088AEB4C7 /* FMDatabase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = XGFMDBManagers/Pods/FMDB/src/fmdb/FMDatabase.m; sourceTree = "<group>"; };
+		7A6BC9C293C24BAB2E4A00D6899293C4 /* ViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = XGFMDBManagers/XGFMDBManagers/ViewController.h; sourceTree = "<group>"; };
+		7AD5BBF2CDC19953C5FF3EAB104D947D /* XGFMDBManagers.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XGFMDBManagers.xcconfig; sourceTree = "<group>"; };
+		7CAB25BA5B79BE81D9256E9A83FCD7DB /* XGKeyValueItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XGKeyValueItem.h; path = XGFMDBManagers/XGFMDBManagers/XGDB/XGKeyValueItem.h; sourceTree = "<group>"; };
+		7F11C47A081E0B1DAEF0C07DBA4658AF /* AppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = XGFMDBManagers/XGFMDBManagers/AppDelegate.m; sourceTree = "<group>"; };
+		7FAA5D25D9FEC8313623E5718EA37259 /* FMResultSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = XGFMDBManagers/Pods/FMDB/src/fmdb/FMResultSet.h; sourceTree = "<group>"; };
+		83AD2652E5C2FCF428F568F6662F9752 /* MJDictionaryCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJDictionaryCache.h; path = MJExtension/MJDictionaryCache.h; sourceTree = "<group>"; };
+		85346921715689AD56D8F2443068655E /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJKeyValue.h"; path = "MJExtension/NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
+		86695C689D90ED31A2B307CFE4B005DA /* NSString+MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MJExtension.h"; path = "XGFMDBManagers/Pods/Headers/Public/MJExtension/NSString+MJExtension.h"; sourceTree = "<group>"; };
+		87EB568421766B11081A0EE3FEBAA241 /* XGFMItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XGFMItem.m; path = XGFMDBManagers/XGFMDBManagers/XGDB/XGFMItem.m; sourceTree = "<group>"; };
+		88990078FF6B3F22869781D885DBD20C /* FMDatabaseQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = src/fmdb/FMDatabaseQueue.m; sourceTree = "<group>"; };
+		8A068AB138073D17CC8891F9FC0D1FF7 /* MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJExtension.h; path = MJExtension/MJExtension.h; sourceTree = "<group>"; };
+		90CF4CFB5A7BFDFC546CAEAAB6DD8A3D /* MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJExtension.h; path = XGFMDBManagers/Pods/Headers/Public/MJExtension/MJExtension.h; sourceTree = "<group>"; };
+		94FAF96F6E194030F9FC872422FD96CB /* FMDB-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FMDB-prefix.pch"; sourceTree = "<group>"; };
+		98D4802191041F729D46906E216B1F85 /* MJProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJProperty.h; path = MJExtension/MJProperty.h; sourceTree = "<group>"; };
+		99C85ABA43F79E09A7454D95C1021C1B /* XGFMDBManagersTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XGFMDBManagersTests.m; path = XGFMDBManagers/XGFMDBManagersTests/XGFMDBManagersTests.m; sourceTree = "<group>"; };
+		9A99075DCFAF4EF7E13D0A9AE88507D4 /* FMResultSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = XGFMDBManagers/Pods/Headers/Public/FMDB/FMResultSet.h; sourceTree = "<group>"; };
+		9CCD2F76029888325DECBF655E1D1773 /* XGFMDBTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XGFMDBTool.m; path = XGFMDBManagers/XGFMDBManagers/XGDB/XGFMDBTool.m; sourceTree = "<group>"; };
+		9D988F386FB49643D44D0E5309261FA7 /* MJPropertyType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJPropertyType.h; path = XGFMDBManagers/Pods/MJExtension/MJExtension/MJPropertyType.h; sourceTree = "<group>"; };
+		A0AD2C9258AFE95955985954CA6EC87B /* FMDatabasePool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = XGFMDBManagers/Pods/FMDB/src/fmdb/FMDatabasePool.m; sourceTree = "<group>"; };
+		A27AC1672916F84852F20E9B6D925DFF /* NSObject+MJCoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJCoding.h"; path = "XGFMDBManagers/Pods/MJExtension/MJExtension/NSObject+MJCoding.h"; sourceTree = "<group>"; };
+		A4289FFCF48363D9C41F4608C1AB95A1 /* NSObject+MJClass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJClass.h"; path = "XGFMDBManagers/Pods/MJExtension/MJExtension/NSObject+MJClass.h"; sourceTree = "<group>"; };
+		A578E5D4F61B9880D3C9B2F23E335DBB /* MJPropertyKey.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJPropertyKey.h; path = MJExtension/MJPropertyKey.h; sourceTree = "<group>"; };
+		A808A610CCBF515EEE496DBC82107C83 /* NSString+MJExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MJExtension.m"; path = "XGFMDBManagers/Pods/MJExtension/MJExtension/NSString+MJExtension.m"; sourceTree = "<group>"; };
+		AA0A8B37480B355020C1310379716D40 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		ACF381FB12E93E93E53F10D8EB0472ED /* MJPropertyType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJPropertyType.h; path = MJExtension/MJPropertyType.h; sourceTree = "<group>"; };
+		AD71E824EF29CA4E3D29DAC293EEC84A /* MJExtension-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "MJExtension-Private.xcconfig"; sourceTree = "<group>"; };
+		B97827DF92A75A3DB9C3ED82ED90D571 /* FMDatabasePool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = XGFMDBManagers/Pods/Headers/Public/FMDB/FMDatabasePool.h; sourceTree = "<group>"; };
+		B9A15786D645BDBF1C5382D7967AC4C1 /* FMDB.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FMDB.xcconfig; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BD23DEFB00AE0B33B75F59F4241892A5 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = src/fmdb/FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		BCE31859A4165C53B768992B3575FECE /* FMDatabaseQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = XGFMDBManagers/Pods/Headers/Private/FMDB/FMDatabaseQueue.h; sourceTree = "<group>"; };
+		BF1423FD83F7711DEC580FDD011B8ACC /* XGKeyValueStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XGKeyValueStore.h; path = XGFMDBManagers/XGFMDBManagers/XGDB/XGKeyValueStore.h; sourceTree = "<group>"; };
 		BF59BC15D23E1E1912C8F334E7236813 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		C659B61316FCF89111201BFF4DDE2725 /* MJFoundation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJFoundation.m; path = MJExtension/MJFoundation.m; sourceTree = "<group>"; };
-		CA5DC49BF5544BCE731030073C92C536 /* FMResultSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = src/fmdb/FMResultSet.h; sourceTree = "<group>"; };
-		D010D0CC2C3D70F34CEFEC9C4F3DFCE2 /* libFMDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFMDB.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		D1774A9DEF6C91144A442176531F2FF2 /* NSObject+MJCoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJCoding.h"; path = "MJExtension/NSObject+MJCoding.h"; sourceTree = "<group>"; };
-		D41EADD923722D40F6EFF847DD96D845 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = src/fmdb/FMDatabaseQueue.h; sourceTree = "<group>"; };
-		D5C66CA23B6442084AF01A119087867D /* FMDB-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FMDB-dummy.m"; sourceTree = "<group>"; };
-		DAAC8EB9E622EA75EDB51EF5CE4E04D3 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = src/fmdb/FMDatabaseQueue.m; sourceTree = "<group>"; };
-		E30322E3C25B72FF0C4F6ABC13FBA122 /* FMDB.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FMDB.xcconfig; sourceTree = "<group>"; };
-		F1BE37BB2C03F623101C807199625F82 /* FMDatabase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = src/fmdb/FMDatabase.m; sourceTree = "<group>"; };
-		F55CFB7F265CC24EB4091FC378885C33 /* MJExtensionConst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJExtensionConst.m; path = MJExtension/MJExtensionConst.m; sourceTree = "<group>"; };
-		F841D431AD90A198D447BB169D38F007 /* FMDB.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = src/fmdb/FMDB.h; sourceTree = "<group>"; };
-		FB5188D2D577A292989B4365314B5652 /* MJDictionaryCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJDictionaryCache.m; path = MJExtension/MJDictionaryCache.m; sourceTree = "<group>"; };
+		C1494A11F4FC2121C9FB2B4BE3578AC3 /* MJFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJFoundation.h; path = XGFMDBManagers/Pods/Headers/Public/MJExtension/MJFoundation.h; sourceTree = "<group>"; };
+		C26BE96EAF9D4F12C0ADD4D6E9EAFA88 /* NSObject+MJClass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJClass.h"; path = "MJExtension/NSObject+MJClass.h"; sourceTree = "<group>"; };
+		C32967BBA784DFE602F83F53A717F975 /* MyModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MyModel.m; path = XGFMDBManagers/XGFMDBManagers/MyModel.m; sourceTree = "<group>"; };
+		C3741BA5FCA6F8D874A103796ADCAE4E /* AppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = XGFMDBManagers/XGFMDBManagers/AppDelegate.h; sourceTree = "<group>"; };
+		C625F2F067318EC82882CC0030E91FA2 /* ViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = XGFMDBManagers/XGFMDBManagers/ViewController.m; sourceTree = "<group>"; };
+		C720654043F19BE9BAC23703D3E31ED3 /* MJExtensionConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJExtensionConst.h; path = XGFMDBManagers/Pods/Headers/Public/MJExtension/MJExtensionConst.h; sourceTree = "<group>"; };
+		C79A040F1426A56562094E6CEDD9210A /* NSObject+MJProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJProperty.m"; path = "XGFMDBManagers/Pods/MJExtension/MJExtension/NSObject+MJProperty.m"; sourceTree = "<group>"; };
+		C93120D108AFEBB27B53119C870E6C7C /* FMDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = XGFMDBManagers/Pods/Headers/Public/FMDB/FMDatabase.h; sourceTree = "<group>"; };
+		CC3FEADDBDBBB5D17BA24CB149666E01 /* FMResultSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = XGFMDBManagers/Pods/FMDB/src/fmdb/FMResultSet.m; sourceTree = "<group>"; };
+		D0AF1B6FAAD0A1398303EA41EAEF0752 /* FMDB-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FMDB-dummy.m"; sourceTree = "<group>"; };
+		D1EF3FFA7E80A8AF26A0B0532ECA1B64 /* NSObject+MJClass.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJClass.m"; path = "MJExtension/NSObject+MJClass.m"; sourceTree = "<group>"; };
+		D418A2EDA3E0D8DAAF1896F0F3EC9CD1 /* MJPropertyKey.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJPropertyKey.m; path = XGFMDBManagers/Pods/MJExtension/MJExtension/MJPropertyKey.m; sourceTree = "<group>"; };
+		D4BB233A2B567AB4194C8B1C3D074FF6 /* NSObject+MJProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJProperty.m"; path = "MJExtension/NSObject+MJProperty.m"; sourceTree = "<group>"; };
+		D724A45574150B573A48953F8E9520F1 /* MJDictionaryCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJDictionaryCache.m; path = XGFMDBManagers/Pods/MJExtension/MJExtension/MJDictionaryCache.m; sourceTree = "<group>"; };
+		DA8EC45D1AF4732C88CADCAA25BB152D /* XGFMDBManagers-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XGFMDBManagers-dummy.m"; sourceTree = "<group>"; };
+		DC79DD1171ADDCA081BDFC54D80CF7E8 /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJKeyValue.h"; path = "XGFMDBManagers/Pods/MJExtension/MJExtension/NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
+		DF91D26A27D6B834D9305D2BBD770AC0 /* FMDB.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = XGFMDBManagers/Pods/FMDB/src/fmdb/FMDB.h; sourceTree = "<group>"; };
+		E0AF6E730BFE192342154263AD5F828C /* XGKeyValueItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XGKeyValueItem.m; path = XGFMDBManagers/XGFMDBManagers/XGDB/XGKeyValueItem.m; sourceTree = "<group>"; };
+		E1673806CE9FC49925CB10B76C35FA3A /* FMDatabasePool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = XGFMDBManagers/Pods/Headers/Private/FMDB/FMDatabasePool.h; sourceTree = "<group>"; };
+		E231ABF18BF1677E2DFFF7FD73973CBE /* MJExtensionConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJExtensionConst.h; path = XGFMDBManagers/Pods/Headers/Private/MJExtension/MJExtensionConst.h; sourceTree = "<group>"; };
+		E3162DF2EB272DD1C594C726525DDBF6 /* FMResultSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = src/fmdb/FMResultSet.h; sourceTree = "<group>"; };
+		E33D2370C8AE743286494BFF1CFBED6B /* main.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = main.m; path = XGFMDBManagers/XGFMDBManagers/main.m; sourceTree = "<group>"; };
+		E464B602DC28C9D608BAEEB710C257E2 /* XGModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XGModel.m; path = XGFMDBManagers/XGFMDBManagers/XGModel.m; sourceTree = "<group>"; };
+		E4E03A834A5E4D3BFD5673138E4253AF /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJKeyValue.h"; path = "XGFMDBManagers/Pods/Headers/Public/MJExtension/NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
+		E53C15A334253E75D48187587CDB52D5 /* MJPropertyKey.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJPropertyKey.h; path = XGFMDBManagers/Pods/Headers/Public/MJExtension/MJPropertyKey.h; sourceTree = "<group>"; };
+		E62BD32070ECBCD9FA6A488B9BE6A470 /* MJPropertyType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJPropertyType.m; path = MJExtension/MJPropertyType.m; sourceTree = "<group>"; };
+		E6B125344E3FC40791AEA7408F006971 /* FMDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = src/fmdb/FMDatabase.h; sourceTree = "<group>"; };
+		E81E042E6CB624FE1004AD6D57A22BE4 /* NSString+MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MJExtension.h"; path = "MJExtension/NSString+MJExtension.h"; sourceTree = "<group>"; };
+		EAE92B0C45B1913ADC0A5F45BC228F95 /* NSObject+MJClass.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJClass.m"; path = "XGFMDBManagers/Pods/MJExtension/MJExtension/NSObject+MJClass.m"; sourceTree = "<group>"; };
+		ECAAE4C00DFDFFB00370F2C651BF5388 /* FMDatabasePool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = src/fmdb/FMDatabasePool.m; sourceTree = "<group>"; };
+		ECBC293C836DE99199C934155D8A2F60 /* FMDatabasePool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = XGFMDBManagers/Pods/FMDB/src/fmdb/FMDatabasePool.h; sourceTree = "<group>"; };
+		EDDE5709E604AE20DE3751FBC5363EBF /* FMResultSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = XGFMDBManagers/Pods/Headers/Private/FMDB/FMResultSet.h; sourceTree = "<group>"; };
+		F0A751B3ABDDDA311B871D3ED189896D /* MJExtensionConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJExtensionConst.h; path = MJExtension/MJExtensionConst.h; sourceTree = "<group>"; };
+		F1A38642D0F94AE945F0355AF4DC69EE /* NSObject+MJCoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJCoding.h"; path = "XGFMDBManagers/Pods/Headers/Private/MJExtension/NSObject+MJCoding.h"; sourceTree = "<group>"; };
+		F44D61F849CB8F608197370D836F4525 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = XGFMDBManagers/Pods/FMDB/src/fmdb/FMDatabaseQueue.h; sourceTree = "<group>"; };
+		F741A4D14A153E8CEC33839434B4227E /* FMDB.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = XGFMDBManagers/Pods/Headers/Private/FMDB/FMDB.h; sourceTree = "<group>"; };
+		F7FA0A7BB8D4490C8D5FC99C10113012 /* NSObject+MJCoding.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJCoding.m"; path = "XGFMDBManagers/Pods/MJExtension/MJExtension/NSObject+MJCoding.m"; sourceTree = "<group>"; };
+		F87F65B310ECDFBE0D7D8CD8B4999219 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = src/fmdb/FMDatabaseQueue.h; sourceTree = "<group>"; };
+		FC59EC52A0FCD9E9354F4E35390C0EB6 /* MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJExtension.h; path = XGFMDBManagers/Pods/MJExtension/MJExtension/MJExtension.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		12547ED63CCB2EEB19798183C236FCCB /* Frameworks */ = {
+		16993A70FB4FF135A35817DFF4DD0649 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8F40267BAC550BE0A44B6E3DDC2D0E1 /* Foundation.framework in Frameworks */,
+				B0EE636A27A7FF158AE5540F3833870B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		266DFF0CCB26B7DDFC958639AC425E3E /* Frameworks */ = {
+		59FA984F7859101F56630EA4B61C60BB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C75307F9B2710C119815D6A10F45FBC /* Foundation.framework in Frameworks */,
+				3FA4A88488CC27822E9C5968B4DC0CAB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EDE620011FFB2649360DAA0781161E3A /* Frameworks */ = {
+		70A5F6534F5D6DA2421B49AE3E6FF770 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B811A509AE4F9EA73590FBD9399A1B41 /* Foundation.framework in Frameworks */,
+				DF64B5162882DB395D656B7F9753D899 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B353658D25A30BD40A5622E46455AA79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45BFF541DC976349B84F6F25E9A044CA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		008C03BE7E21782B2429FBF73F51F593 /* common */ = {
+		012F9D8ECAA9E151AD0D912732A5D98A /* MJExtension */ = {
 			isa = PBXGroup;
 			children = (
-				F841D431AD90A198D447BB169D38F007 /* FMDB.h */,
-				294B978C6D40EE4609A581872A27FE74 /* FMDatabase.h */,
-				F1BE37BB2C03F623101C807199625F82 /* FMDatabase.m */,
-				BD23DEFB00AE0B33B75F59F4241892A5 /* FMDatabaseAdditions.h */,
-				18D6CAC333D828D46FB12AB32ED49D96 /* FMDatabaseAdditions.m */,
-				255FD4A22314A7B8A50A2E7DC761C810 /* FMDatabasePool.h */,
-				258C31C86B3738643AFA78ED79A9D22D /* FMDatabasePool.m */,
-				D41EADD923722D40F6EFF847DD96D845 /* FMDatabaseQueue.h */,
-				DAAC8EB9E622EA75EDB51EF5CE4E04D3 /* FMDatabaseQueue.m */,
-				CA5DC49BF5544BCE731030073C92C536 /* FMResultSet.h */,
-				6B14912269DEDAF9B78C66D2C91C7B62 /* FMResultSet.m */,
+				83AD2652E5C2FCF428F568F6662F9752 /* MJDictionaryCache.h */,
+				0090B249F5EC616EEA0950F5C3CA8716 /* MJDictionaryCache.m */,
+				8A068AB138073D17CC8891F9FC0D1FF7 /* MJExtension.h */,
+				F0A751B3ABDDDA311B871D3ED189896D /* MJExtensionConst.h */,
+				08901D1764D3FE4827A7F9959E83C32A /* MJExtensionConst.m */,
+				68684718C6830199E60F3F13179235E1 /* MJFoundation.h */,
+				6928BFF33A9D0AF614B93E63019E82C4 /* MJFoundation.m */,
+				98D4802191041F729D46906E216B1F85 /* MJProperty.h */,
+				1089A2E7611AEE81E608CE64EE3D9F0B /* MJProperty.m */,
+				A578E5D4F61B9880D3C9B2F23E335DBB /* MJPropertyKey.h */,
+				61B5F6797215AACC9D205A5F42B83A98 /* MJPropertyKey.m */,
+				ACF381FB12E93E93E53F10D8EB0472ED /* MJPropertyType.h */,
+				E62BD32070ECBCD9FA6A488B9BE6A470 /* MJPropertyType.m */,
+				C26BE96EAF9D4F12C0ADD4D6E9EAFA88 /* NSObject+MJClass.h */,
+				D1EF3FFA7E80A8AF26A0B0532ECA1B64 /* NSObject+MJClass.m */,
+				768F825D07B56D48EA302C73B24CAA19 /* NSObject+MJCoding.h */,
+				77E5D8D01AE72D13347B0302453CBD6D /* NSObject+MJCoding.m */,
+				85346921715689AD56D8F2443068655E /* NSObject+MJKeyValue.h */,
+				6A21BFE384013BB348F3030E5E5EE35A /* NSObject+MJKeyValue.m */,
+				68C5D7321D00BFFE609EF9DB8EB14CB3 /* NSObject+MJProperty.h */,
+				D4BB233A2B567AB4194C8B1C3D074FF6 /* NSObject+MJProperty.m */,
+				E81E042E6CB624FE1004AD6D57A22BE4 /* NSString+MJExtension.h */,
+				064F0ADA822BA0D8CCE51AA0376BFC15 /* NSString+MJExtension.m */,
+				6D83F797FC4031F1ED7FC5A9829DF5CE /* Support Files */,
 			);
-			name = common;
-			sourceTree = "<group>";
-		};
-		4F850F26C996815F93509C503BF8E7A4 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				BF3FA9952721CE55BFD5C89C2495EC23 /* FMDB */,
-				64C5CF3529DD1BFE1CFC1708F8ADFFA9 /* MJExtension */,
-			);
-			name = Pods;
+			path = MJExtension;
 			sourceTree = "<group>";
 		};
 		53F661C0CA7190D2CF05023FB33D61E4 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				1F8709913C2E1FA25DBDD674D992CF19 /* Foundation.framework */,
+				128BD6C5D73570C1650F76792B04FA10 /* Foundation.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		64C5CF3529DD1BFE1CFC1708F8ADFFA9 /* MJExtension */ = {
+		54C2EC5B44490AD7CA3BA167CB636EF3 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				843B94B3A7EBC364DF06C0214F3B7E05 /* MJDictionaryCache.h */,
-				FB5188D2D577A292989B4365314B5652 /* MJDictionaryCache.m */,
-				55819EE9F6E3DBBA89BD3A1E34EDF386 /* MJExtension.h */,
-				133ECC6DB07AFDB4F0BF665B3E10A7FA /* MJExtensionConst.h */,
-				F55CFB7F265CC24EB4091FC378885C33 /* MJExtensionConst.m */,
-				01671931C340207D71F1D1E780B27A51 /* MJFoundation.h */,
-				C659B61316FCF89111201BFF4DDE2725 /* MJFoundation.m */,
-				5E5456C81F4DA40FE5BFF152A0CEA88F /* MJProperty.h */,
-				AD29FFAB95DD0F02450766CE73277A97 /* MJProperty.m */,
-				1824FA712D4F0F0BF1E983CE48F130DC /* MJPropertyKey.h */,
-				1EE342E9CAED5175252A5A2859EBDB08 /* MJPropertyKey.m */,
-				40B99D16821D1C6011CC632EAD2051A6 /* MJPropertyType.h */,
-				72176F30AD4C259AE9ED95A2AD84DB67 /* MJPropertyType.m */,
-				64E284ED6853C3031AD87452CEBA7292 /* NSObject+MJClass.h */,
-				21FB30D99F321BC8EB667FABBA5EF147 /* NSObject+MJClass.m */,
-				D1774A9DEF6C91144A442176531F2FF2 /* NSObject+MJCoding.h */,
-				5636CBF669C66112A947A8209069CF64 /* NSObject+MJCoding.m */,
-				3E396A8DA4ECCA796A0F6E5112601343 /* NSObject+MJKeyValue.h */,
-				83FF5E6EFBF8E368F6113CB824A203B1 /* NSObject+MJKeyValue.m */,
-				137A40BAA6133744095610A4D647E867 /* NSObject+MJProperty.h */,
-				43CCBAA11985E828F543460102FA2AA0 /* NSObject+MJProperty.m */,
-				814E55961A4B38569F37A873EF5F64D2 /* NSString+MJExtension.h */,
-				386F3C9A027974A17418EEC174B786EE /* NSString+MJExtension.m */,
-				8ACD2675C6EF357F473FEC80C74E2423 /* Support Files */,
+				B9A15786D645BDBF1C5382D7967AC4C1 /* FMDB.xcconfig */,
+				4CEE4375374E957A3FA0E0A8B588EAB2 /* FMDB-Private.xcconfig */,
+				D0AF1B6FAAD0A1398303EA41EAEF0752 /* FMDB-dummy.m */,
+				94FAF96F6E194030F9FC872422FD96CB /* FMDB-prefix.pch */,
 			);
-			path = MJExtension;
+			name = "Support Files";
+			path = "../Target Support Files/FMDB";
+			sourceTree = "<group>";
+		};
+		6D83F797FC4031F1ED7FC5A9829DF5CE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				176962CE91CFEFAA7C6E7CAD10F3A192 /* MJExtension.xcconfig */,
+				AD71E824EF29CA4E3D29DAC293EEC84A /* MJExtension-Private.xcconfig */,
+				3CBF2A7DD6B479B8A457B8754DC8A4BD /* MJExtension-dummy.m */,
+				6829F6D0C3D24DB6988DD4A9F6638C20 /* MJExtension-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MJExtension";
+			sourceTree = "<group>";
+		};
+		6E10BF259FA58EF95B8AE46EAD8F74C2 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				54C2EC5B44490AD7CA3BA167CB636EF3 /* Support Files */,
+				B828F8BD1B22D07C81819B1647E39B50 /* common */,
+			);
+			path = FMDB;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -221,34 +431,119 @@
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				4F850F26C996815F93509C503BF8E7A4 /* Pods */,
+				8E07A6CE756E762A4EAFED298F4E93AE /* Pods */,
 				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
 				D2411A5FE7F7A004607BED49990C37F4 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		80EE6AE32CC59431DBCA640D85AD6F97 /* Support Files */ = {
+		823BAAEEF2532F4465C4FC547A0F6D47 /* XGFMDBManagers */ = {
 			isa = PBXGroup;
 			children = (
-				E30322E3C25B72FF0C4F6ABC13FBA122 /* FMDB.xcconfig */,
-				32BC3A0EE7C12FD17FA211402986186D /* FMDB-Private.xcconfig */,
-				D5C66CA23B6442084AF01A119087867D /* FMDB-dummy.m */,
-				A58D05C39176D3DE5C5477FB0B81A207 /* FMDB-prefix.pch */,
+				C3741BA5FCA6F8D874A103796ADCAE4E /* AppDelegate.h */,
+				7F11C47A081E0B1DAEF0C07DBA4658AF /* AppDelegate.m */,
+				F741A4D14A153E8CEC33839434B4227E /* FMDB.h */,
+				DF91D26A27D6B834D9305D2BBD770AC0 /* FMDB.h */,
+				6C1424A2E1EA503354EA87190CBDEB9E /* FMDB.h */,
+				089BB63B6290BAC2F3B8CE57A9A84DA2 /* FMDB-dummy.m */,
+				C93120D108AFEBB27B53119C870E6C7C /* FMDatabase.h */,
+				29B87961913AD78072AAF2F5EC72DF90 /* FMDatabase.h */,
+				5802A32EDF726C356F135241DEFAE565 /* FMDatabase.h */,
+				79E3F580624C24A45E086CB088AEB4C7 /* FMDatabase.m */,
+				0136F2535D9276E017312CDE6E6668AE /* FMDatabaseAdditions.h */,
+				1EB240E4DCB980A2AB8824B9BCF11F26 /* FMDatabaseAdditions.h */,
+				44FC8FB7CEB8B64C8E13C067495AF761 /* FMDatabaseAdditions.h */,
+				2045F04EC11CE334A62F2F6C2034D76D /* FMDatabaseAdditions.m */,
+				B97827DF92A75A3DB9C3ED82ED90D571 /* FMDatabasePool.h */,
+				ECBC293C836DE99199C934155D8A2F60 /* FMDatabasePool.h */,
+				E1673806CE9FC49925CB10B76C35FA3A /* FMDatabasePool.h */,
+				A0AD2C9258AFE95955985954CA6EC87B /* FMDatabasePool.m */,
+				BCE31859A4165C53B768992B3575FECE /* FMDatabaseQueue.h */,
+				F44D61F849CB8F608197370D836F4525 /* FMDatabaseQueue.h */,
+				00D36E02BA3F8869682FB6F3A384C5C3 /* FMDatabaseQueue.h */,
+				07C8E5009A4D6D305295DBEF909AD076 /* FMDatabaseQueue.m */,
+				9A99075DCFAF4EF7E13D0A9AE88507D4 /* FMResultSet.h */,
+				7FAA5D25D9FEC8313623E5718EA37259 /* FMResultSet.h */,
+				EDDE5709E604AE20DE3751FBC5363EBF /* FMResultSet.h */,
+				CC3FEADDBDBBB5D17BA24CB149666E01 /* FMResultSet.m */,
+				5CC7F0076BDC276647E743B2D1905CF0 /* MJDictionaryCache.h */,
+				4EAA573CDDABC79D9718424CE7918D06 /* MJDictionaryCache.h */,
+				6FCA79F26009C2EBAB073DC4A574172F /* MJDictionaryCache.h */,
+				D724A45574150B573A48953F8E9520F1 /* MJDictionaryCache.m */,
+				FC59EC52A0FCD9E9354F4E35390C0EB6 /* MJExtension.h */,
+				90CF4CFB5A7BFDFC546CAEAAB6DD8A3D /* MJExtension.h */,
+				50B3586E6AA65F20BF9A9EA945BDD58F /* MJExtension.h */,
+				77761FBABAC58BFA4BF6025ED727B594 /* MJExtension-dummy.m */,
+				E231ABF18BF1677E2DFFF7FD73973CBE /* MJExtensionConst.h */,
+				044C60F063223B6D1F26C1F16A932080 /* MJExtensionConst.h */,
+				C720654043F19BE9BAC23703D3E31ED3 /* MJExtensionConst.h */,
+				6F4060BC83DA6BE40C7B4BF852353301 /* MJExtensionConst.m */,
+				4CA27D9967112417E4B7F117160BE2FB /* MJFoundation.h */,
+				2EF69C80784DA831DE2EAA0DFD3C0355 /* MJFoundation.h */,
+				C1494A11F4FC2121C9FB2B4BE3578AC3 /* MJFoundation.h */,
+				247106249EFAAC5A1DA58B5B534A096B /* MJFoundation.m */,
+				6656DE25C58754BB7E6749397B75C1DE /* MJProperty.h */,
+				0FF45D54B54A4E2B620530671F307122 /* MJProperty.h */,
+				185064DE67117CD0510DAC1FD2B20648 /* MJProperty.h */,
+				442426295BBAB10142E625CF55CFA32A /* MJProperty.m */,
+				4397D80A08FFBE9CA9827D71AF9B5DB8 /* MJPropertyKey.h */,
+				2AD834AA1653B84A67FDBA72F671D37B /* MJPropertyKey.h */,
+				E53C15A334253E75D48187587CDB52D5 /* MJPropertyKey.h */,
+				D418A2EDA3E0D8DAAF1896F0F3EC9CD1 /* MJPropertyKey.m */,
+				9D988F386FB49643D44D0E5309261FA7 /* MJPropertyType.h */,
+				4B884631012A26F4755338549F7C8689 /* MJPropertyType.h */,
+				2410117F97DD268508BBBE00100BE87B /* MJPropertyType.h */,
+				4C1FFADD2C468E2775F8B10E8D20830D /* MJPropertyType.m */,
+				32E6CB1D5EC6A6CA45FFCC0DAEA6D2FD /* MyModel.h */,
+				C32967BBA784DFE602F83F53A717F975 /* MyModel.m */,
+				503B07351BCBCD37699116E3C5E83502 /* NSObject+MJClass.h */,
+				62B92C345C2C8194A73F1E1C6CFEC857 /* NSObject+MJClass.h */,
+				A4289FFCF48363D9C41F4608C1AB95A1 /* NSObject+MJClass.h */,
+				EAE92B0C45B1913ADC0A5F45BC228F95 /* NSObject+MJClass.m */,
+				2CA122A8BF83F2E9346AF2827D320245 /* NSObject+MJCoding.h */,
+				F1A38642D0F94AE945F0355AF4DC69EE /* NSObject+MJCoding.h */,
+				A27AC1672916F84852F20E9B6D925DFF /* NSObject+MJCoding.h */,
+				F7FA0A7BB8D4490C8D5FC99C10113012 /* NSObject+MJCoding.m */,
+				DC79DD1171ADDCA081BDFC54D80CF7E8 /* NSObject+MJKeyValue.h */,
+				6231B3B2EB94877338FFEF8104E06167 /* NSObject+MJKeyValue.h */,
+				E4E03A834A5E4D3BFD5673138E4253AF /* NSObject+MJKeyValue.h */,
+				57A3644CE7A1F76885DF40FF7ABF5AB6 /* NSObject+MJKeyValue.m */,
+				27A128EF9F536CEE00162BC096FCE634 /* NSObject+MJProperty.h */,
+				6B3F3E1E3905D1449A935F37535118C2 /* NSObject+MJProperty.h */,
+				60569FE42C62952502130016CABEFA4D /* NSObject+MJProperty.h */,
+				C79A040F1426A56562094E6CEDD9210A /* NSObject+MJProperty.m */,
+				3892A356BA3924B44EB39F55F017CB77 /* NSString+MJExtension.h */,
+				141BFAEF00A42A399EEAE3AA4B12ECE4 /* NSString+MJExtension.h */,
+				86695C689D90ED31A2B307CFE4B005DA /* NSString+MJExtension.h */,
+				A808A610CCBF515EEE496DBC82107C83 /* NSString+MJExtension.m */,
+				2AFB2C91C6395CDD96BD8B6A39407D17 /* Pods-dummy.m */,
+				7A6BC9C293C24BAB2E4A00D6899293C4 /* ViewController.h */,
+				C625F2F067318EC82882CC0030E91FA2 /* ViewController.m */,
+				99C85ABA43F79E09A7454D95C1021C1B /* XGFMDBManagersTests.m */,
+				37CCB6910FD11AF18745D4FC850AC798 /* XGFMDBTool.h */,
+				9CCD2F76029888325DECBF655E1D1773 /* XGFMDBTool.m */,
+				151A581BEDC9F28BAB16F78F7EF5071C /* XGFMItem.h */,
+				87EB568421766B11081A0EE3FEBAA241 /* XGFMItem.m */,
+				7CAB25BA5B79BE81D9256E9A83FCD7DB /* XGKeyValueItem.h */,
+				E0AF6E730BFE192342154263AD5F828C /* XGKeyValueItem.m */,
+				BF1423FD83F7711DEC580FDD011B8ACC /* XGKeyValueStore.h */,
+				46E23279FD9BB283909917492F395CE9 /* XGKeyValueStore.m */,
+				4AB46B5631E9ADA4BA95A8F0A4BA9C42 /* XGModel.h */,
+				E464B602DC28C9D608BAEEB710C257E2 /* XGModel.m */,
+				E33D2370C8AE743286494BFF1CFBED6B /* main.m */,
+				CDF9FA579552A38B1AE8CDFEE2BD0627 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/FMDB";
+			path = XGFMDBManagers;
 			sourceTree = "<group>";
 		};
-		8ACD2675C6EF357F473FEC80C74E2423 /* Support Files */ = {
+		8E07A6CE756E762A4EAFED298F4E93AE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5A9126260E7E882805B209C5B64986BB /* MJExtension.xcconfig */,
-				1DCD44ECD37CE3800D21CFE26EE03A31 /* MJExtension-Private.xcconfig */,
-				798A00D1736DF6F1A8C7065EA3FB1F3B /* MJExtension-dummy.m */,
-				77E847D94FCF2FD6C0331470F05C1AF7 /* MJExtension-prefix.pch */,
+				6E10BF259FA58EF95B8AE46EAD8F74C2 /* FMDB */,
+				012F9D8ECAA9E151AD0D912732A5D98A /* MJExtension */,
+				823BAAEEF2532F4465C4FC547A0F6D47 /* XGFMDBManagers */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/MJExtension";
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		952EEBFAF8F7E620423C9F156F25A506 /* Pods */ = {
@@ -256,13 +551,31 @@
 			children = (
 				15A529C27057E4A57D259CBC6E6CE49C /* Pods-acknowledgements.markdown */,
 				BF59BC15D23E1E1912C8F334E7236813 /* Pods-acknowledgements.plist */,
-				097EE3F7F1152765756FB1A708CFE215 /* Pods-dummy.m */,
+				AA0A8B37480B355020C1310379716D40 /* Pods-dummy.m */,
 				641AE05DD55E5E6AC1590CD7B4A18F97 /* Pods-resources.sh */,
-				8790FBC9E23336E7BC1432E2505BE6B8 /* Pods.debug.xcconfig */,
-				44984FB4E4D424793119D68443594858 /* Pods.release.xcconfig */,
+				544094F0A0EF7232A28F3626B7DA4BEE /* Pods.debug.xcconfig */,
+				52BA61F0569D5F85005B37AA059CC857 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
 			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		B828F8BD1B22D07C81819B1647E39B50 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				1293E7F382FA662251ED610C62FBB1B3 /* FMDB.h */,
+				E6B125344E3FC40791AEA7408F006971 /* FMDatabase.h */,
+				41D353F7E74247AFA22B15988904100E /* FMDatabase.m */,
+				192442AE5E337DC38E83782020D93A17 /* FMDatabaseAdditions.h */,
+				6DA007F1466A9109B41F42E2480DEDF0 /* FMDatabaseAdditions.m */,
+				19AA8B14EA387C44C9A3E877878B69F1 /* FMDatabasePool.h */,
+				ECAAE4C00DFDFFB00370F2C651BF5388 /* FMDatabasePool.m */,
+				F87F65B310ECDFBE0D7D8CD8B4999219 /* FMDatabaseQueue.h */,
+				88990078FF6B3F22869781D885DBD20C /* FMDatabaseQueue.m */,
+				E3162DF2EB272DD1C594C726525DDBF6 /* FMResultSet.h */,
+				2D9C69BB8C0B2CB565BA8F853E69E83B /* FMResultSet.m */,
+			);
+			name = common;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -273,23 +586,27 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BF3FA9952721CE55BFD5C89C2495EC23 /* FMDB */ = {
-			isa = PBXGroup;
-			children = (
-				80EE6AE32CC59431DBCA640D85AD6F97 /* Support Files */,
-				008C03BE7E21782B2429FBF73F51F593 /* common */,
-			);
-			path = FMDB;
-			sourceTree = "<group>";
-		};
 		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D010D0CC2C3D70F34CEFEC9C4F3DFCE2 /* libFMDB.a */,
-				5FD83DABFE7EA851C4EA6948F26BDB81 /* libMJExtension.a */,
-				76F80F0E19807AF33F1A5EF02CE3E8A5 /* libPods.a */,
+				2C336EA5DC25B4D4A3B7113D197DA085 /* libFMDB.a */,
+				5C5ED963CF6011F70ABEF21500FE1639 /* libMJExtension.a */,
+				3A1BA8EF327315DB6C6E360868DD98E6 /* libPods.a */,
+				79A4A50A3A425CA2B72FF405912E3A8D /* libXGFMDBManagers.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		CDF9FA579552A38B1AE8CDFEE2BD0627 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7AD5BBF2CDC19953C5FF3EAB104D947D /* XGFMDBManagers.xcconfig */,
+				676EFE06737D8C2F202940DDD9376CBB /* XGFMDBManagers-Private.xcconfig */,
+				DA8EC45D1AF4732C88CADCAA25BB152D /* XGFMDBManagers-dummy.m */,
+				60D281CD209F9828D0ACFC7ABEACC2A9 /* XGFMDBManagers-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/XGFMDBManagers";
 			sourceTree = "<group>";
 		};
 		D2411A5FE7F7A004607BED49990C37F4 /* Targets Support Files */ = {
@@ -303,48 +620,117 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		98AE9370FCEA83E601949161ED72D01B /* Headers */ = {
+		0431A31DED34EC6612AF9B996A6F9555 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F12A1E3553D6E83E4710CC5DC0943F4 /* FMDB.h in Headers */,
-				3C1B71222184D8A91DA6B5F098B000F4 /* FMDatabase.h in Headers */,
-				A47F216E337038D00CB678EE24220A7C /* FMDatabaseAdditions.h in Headers */,
-				675EDB02C5DC7CB3ECA5B24E3FE08BC5 /* FMDatabasePool.h in Headers */,
-				E31CC3C8C469A24D7E4F5771FE28C4D4 /* FMDatabaseQueue.h in Headers */,
-				4652D0B0438E253659E13475F5B4AF1B /* FMResultSet.h in Headers */,
+				8A31057C1C32F9CF5D54AADEC45F8305 /* FMDB.h in Headers */,
+				9E5B7C19D45DDFB7B15EEF0C8FAE0D89 /* FMDatabase.h in Headers */,
+				7FFDA83F5A5D7A3B653DCD65A0C62FD1 /* FMDatabaseAdditions.h in Headers */,
+				028DFCDEF888A5E72362FF753EC66F89 /* FMDatabasePool.h in Headers */,
+				CC5298B39A339ED7AE9208B7D5F8564F /* FMDatabaseQueue.h in Headers */,
+				6C54A70231D65CD032A5562371E04ECF /* FMResultSet.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D0C5226153AAD40757731A8916679FA2 /* Headers */ = {
+		4A44B04DB170AC8E66DA5C1B10474105 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C00F3C267B021783818B4175B478BC24 /* MJDictionaryCache.h in Headers */,
-				7CA68F099852530EAAA97E6EB243584E /* MJExtension.h in Headers */,
-				FA714A230928AC622B06BD1B3AD686DB /* MJExtensionConst.h in Headers */,
-				6C56D5081C5CB0FB7A986408BCB2B62B /* MJFoundation.h in Headers */,
-				B31B6B69210230674A3852F359A4F95E /* MJProperty.h in Headers */,
-				63E8CABE1C63257072D03F7153DB6145 /* MJPropertyKey.h in Headers */,
-				09147C4C33D3F2917EA82564BC9DA18E /* MJPropertyType.h in Headers */,
-				B098487A0E4E0FB8849A6C9483596985 /* NSObject+MJClass.h in Headers */,
-				1EDC0C4CD80AC6695BB1A3A44DA69547 /* NSObject+MJCoding.h in Headers */,
-				BDDEB92540A6DEDCA752AC5A99C7956A /* NSObject+MJKeyValue.h in Headers */,
-				BF90B10A0B7903371C1795F27B7ADC18 /* NSObject+MJProperty.h in Headers */,
-				0B8A71C72741EC9C7EFFFFFC1138E671 /* NSString+MJExtension.h in Headers */,
+				C45BB01724362D8D25E29F7DB483D9CC /* AppDelegate.h in Headers */,
+				FFA806043877C510B29B465AFAFE1CB2 /* FMDB.h in Headers */,
+				C729DF52C39CFFCAE3BDA15BA950630F /* FMDB.h in Headers */,
+				66CC8772DE4D77307F77E55235DCEBE1 /* FMDB.h in Headers */,
+				5358C341C0562991C7005A42746EADAC /* FMDatabase.h in Headers */,
+				CD1129F7A14EFF653197E7F1BBEA97C2 /* FMDatabase.h in Headers */,
+				0D985FB570B6934DECFBB6170EFC4665 /* FMDatabase.h in Headers */,
+				33191BB32C3D0ACC7D77532FEF727E41 /* FMDatabaseAdditions.h in Headers */,
+				8FF629A3ADBE669F95C3FA9EFD827B60 /* FMDatabaseAdditions.h in Headers */,
+				51E00143ECA8FFC92E2D6CF5ECE052C8 /* FMDatabaseAdditions.h in Headers */,
+				7B155512EECC297462F1FF73390659B4 /* FMDatabasePool.h in Headers */,
+				DB7A2E448E0F8E90390BAAB2F2029294 /* FMDatabasePool.h in Headers */,
+				04291F27D4EAF5E0330E5F7F2EC66D0C /* FMDatabasePool.h in Headers */,
+				56CB64994B2DD3B96943FBEDF68065F0 /* FMDatabaseQueue.h in Headers */,
+				1ACA760E1DEDB965CD392AB4669A4718 /* FMDatabaseQueue.h in Headers */,
+				8F7092A675F080D7E186ED9985E3C25E /* FMDatabaseQueue.h in Headers */,
+				015AD5E28A736D1C728E042A6612A33E /* FMResultSet.h in Headers */,
+				690628209D1FD73F104EF6EE8783867F /* FMResultSet.h in Headers */,
+				F4D060774992CC1148383E89F87F6D7D /* FMResultSet.h in Headers */,
+				486272D6F14F7F4614022A29A572BFB9 /* MJDictionaryCache.h in Headers */,
+				0229D51630FFF64D70BA55A56935CAF9 /* MJDictionaryCache.h in Headers */,
+				C859870082A0D5136ECE87BCF8FEB421 /* MJDictionaryCache.h in Headers */,
+				BC297BF310C571E84177C74177CC1600 /* MJExtension.h in Headers */,
+				849FE649BBD38C7D125BDE492E9864A0 /* MJExtension.h in Headers */,
+				335AC407EB1797E4B9705227CC915D3E /* MJExtension.h in Headers */,
+				1B8EC278604F249D155F0114C47B0F61 /* MJExtensionConst.h in Headers */,
+				9BB4794E37CF6F7590E4829BF01F5D4D /* MJExtensionConst.h in Headers */,
+				3BB7FBC4BB86CFA70E92B7EB84E24DC4 /* MJExtensionConst.h in Headers */,
+				310AD525E1E6334513EBBC3B84B121A3 /* MJFoundation.h in Headers */,
+				E3457495D2A0CF647B49F86416C17203 /* MJFoundation.h in Headers */,
+				5AC768F593B19AC77B33F2BCDE7C7383 /* MJFoundation.h in Headers */,
+				0A971219056949895D26F44BD24EC2B2 /* MJProperty.h in Headers */,
+				F3B162D4F56AD01490BBB8F91F038CE0 /* MJProperty.h in Headers */,
+				FDC8152B9B136C0F555FADBB54FC50C9 /* MJProperty.h in Headers */,
+				892512D29A21B52DD0142763BCBFBC47 /* MJPropertyKey.h in Headers */,
+				AA4041A8766299479277B97AA004D68E /* MJPropertyKey.h in Headers */,
+				B951C4063C6D303A428FBA19935C6CDF /* MJPropertyKey.h in Headers */,
+				BC57DEB06BE8DB68ED539B650C1E697E /* MJPropertyType.h in Headers */,
+				1B58BCE4A7435DFE5567D8FA32B90EF1 /* MJPropertyType.h in Headers */,
+				2C1B8A03B1FD6F2FA6264068220CDC71 /* MJPropertyType.h in Headers */,
+				7A356F30CDCEC5A4EE7FEBE286671235 /* MyModel.h in Headers */,
+				8BBD5C6446F78E9B19C11FE085EF187E /* NSObject+MJClass.h in Headers */,
+				11F7542B7541D62BC9A04249D2CD5FC5 /* NSObject+MJClass.h in Headers */,
+				5D6B947BFC72146DBD9ADC18F35A68E3 /* NSObject+MJClass.h in Headers */,
+				16DAA8239C1B1DA906CAF5D8033574AC /* NSObject+MJCoding.h in Headers */,
+				ADBD950606A035BADF2287CD92E3B4A8 /* NSObject+MJCoding.h in Headers */,
+				FD4DB7B71D3766E3D79770C74CB7D1B8 /* NSObject+MJCoding.h in Headers */,
+				975DBD0BA7309F9DA2B9A0F19E3AB67F /* NSObject+MJKeyValue.h in Headers */,
+				C3E4BE3C8E4640E5CF53DE19C824CD26 /* NSObject+MJKeyValue.h in Headers */,
+				4E41E4C4A3AA21F72AE5719F3ED751D5 /* NSObject+MJKeyValue.h in Headers */,
+				7C9BE8D3085879F3C4EDA150181EC97D /* NSObject+MJProperty.h in Headers */,
+				D2E347C13EA33D053B93A3511B0B9A8D /* NSObject+MJProperty.h in Headers */,
+				E9179248CEC72E7441B562EF38983588 /* NSObject+MJProperty.h in Headers */,
+				FF5D5A6298EEFBE55E35E0CD08C2CAEA /* NSString+MJExtension.h in Headers */,
+				E07897E17F357706FF0B0A1B41910B0D /* NSString+MJExtension.h in Headers */,
+				B82B44221B543848F498C4BC2711E8F2 /* NSString+MJExtension.h in Headers */,
+				EF7787144F740C05370D5D5F9388EC27 /* ViewController.h in Headers */,
+				93B608D80A5213C52A790F1C5C21B838 /* XGFMDBTool.h in Headers */,
+				FB2741F3DF0196B5ADC04483CBC8568F /* XGFMItem.h in Headers */,
+				455D9A18ABF7CBF95BCEC794858138F8 /* XGKeyValueItem.h in Headers */,
+				3EFEB88AA2EE009653FB22350A8CDB56 /* XGKeyValueStore.h in Headers */,
+				EC39E8923629CD31437A98A30F2E9613 /* XGModel.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90325A0F18D7B2551637120E69D72AC7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C15E76FE3D2A14962408B8E8076A87F5 /* MJDictionaryCache.h in Headers */,
+				75E21DBE5595229E68FF28D62819F90F /* MJExtension.h in Headers */,
+				9AD5DCD77ABE201619A8516A2640A313 /* MJExtensionConst.h in Headers */,
+				4E943D831F00BA446B65CEC835943898 /* MJFoundation.h in Headers */,
+				DD5C6BB2D18686D58D01A42FEEDACE47 /* MJProperty.h in Headers */,
+				637A3B7ADC80CEF9E1BC14AF097478F5 /* MJPropertyKey.h in Headers */,
+				3FC3AE2BE34D50482E0277A8D81405F3 /* MJPropertyType.h in Headers */,
+				1DAA8D38C735DC941F9F032DB38D097D /* NSObject+MJClass.h in Headers */,
+				AD6FD00FE26D041BA6836276AC860B4A /* NSObject+MJCoding.h in Headers */,
+				43ED241A750FF5CAC81F367BF2ADB66E /* NSObject+MJKeyValue.h in Headers */,
+				6F164D841DE7BD9DD78DA622F0B0F6A2 /* NSObject+MJProperty.h in Headers */,
+				8A5AFEE271AB65F8E584149425A8A050 /* NSString+MJExtension.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2CEE0C0DE50EB8F675288820D928619C /* MJExtension */ = {
+		07D027052539933EEB29DF259EB7551E /* MJExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6FCC6ACB439005BFA90900BF76C598D7 /* Build configuration list for PBXNativeTarget "MJExtension" */;
+			buildConfigurationList = 2181AB82B93139DD332A123ECF97836A /* Build configuration list for PBXNativeTarget "MJExtension" */;
 			buildPhases = (
-				CAE76BDD97B61A9A7FAEEAE22A4FF7DD /* Sources */,
-				12547ED63CCB2EEB19798183C236FCCB /* Frameworks */,
-				D0C5226153AAD40757731A8916679FA2 /* Headers */,
+				729F44F7540BC01A3AE7400B8C0430EA /* Sources */,
+				70A5F6534F5D6DA2421B49AE3E6FF770 /* Frameworks */,
+				90325A0F18D7B2551637120E69D72AC7 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -352,16 +738,35 @@
 			);
 			name = MJExtension;
 			productName = MJExtension;
-			productReference = 5FD83DABFE7EA851C4EA6948F26BDB81 /* libMJExtension.a */;
+			productReference = 5C5ED963CF6011F70ABEF21500FE1639 /* libMJExtension.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		5E2F52D234CB994148A837762B2C81D1 /* FMDB */ = {
+		8167B43F4A670EE8AE226CE30BB07C91 /* Pods */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0A27435F388F0E1E7DEF65A676231297 /* Build configuration list for PBXNativeTarget "FMDB" */;
+			buildConfigurationList = 0A45F804811C97E2745EACBA4FDA63D6 /* Build configuration list for PBXNativeTarget "Pods" */;
 			buildPhases = (
-				649A798DF101F7B923854502A1D2CC36 /* Sources */,
-				EDE620011FFB2649360DAA0781161E3A /* Frameworks */,
-				98AE9370FCEA83E601949161ED72D01B /* Headers */,
+				B8041872615EAA8F7448F28E59514BF8 /* Sources */,
+				59FA984F7859101F56630EA4B61C60BB /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E614DCBCB524A4C512D77B3C97C73F8A /* PBXTargetDependency */,
+				F0E83E480D9F17C9FD9E8D0ED728AE61 /* PBXTargetDependency */,
+				4968F95780811A12A653BFF99AC9067D /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = 3A1BA8EF327315DB6C6E360868DD98E6 /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		ADDD45A17C9934D3BF2EF7A6758DF7A5 /* FMDB */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4042FC7DC35BCB0E985F957D88691B94 /* Build configuration list for PBXNativeTarget "FMDB" */;
+			buildPhases = (
+				A24D43E5555EE40E6AE1DE21FF5786A1 /* Sources */,
+				B353658D25A30BD40A5622E46455AA79 /* Frameworks */,
+				0431A31DED34EC6612AF9B996A6F9555 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -369,25 +774,24 @@
 			);
 			name = FMDB;
 			productName = FMDB;
-			productReference = D010D0CC2C3D70F34CEFEC9C4F3DFCE2 /* libFMDB.a */;
+			productReference = 2C336EA5DC25B4D4A3B7113D197DA085 /* libFMDB.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		E2399675EDE1187543D3EBFB303A1D46 /* Pods */ = {
+		E6356FE5AF6BFA0AAD8222ACE99D6652 /* XGFMDBManagers */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 64353540475E4857F71F02CCECFCDCF3 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildConfigurationList = 8CC47475FDE76B3B77EE97710D07FBFB /* Build configuration list for PBXNativeTarget "XGFMDBManagers" */;
 			buildPhases = (
-				5229D549DBCD38C84CB49F2C3A008141 /* Sources */,
-				266DFF0CCB26B7DDFC958639AC425E3E /* Frameworks */,
+				78E0A11D482EC8973B9F54D17BAB8614 /* Sources */,
+				16993A70FB4FF135A35817DFF4DD0649 /* Frameworks */,
+				4A44B04DB170AC8E66DA5C1B10474105 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				FA871C03063C2110A6B2E56E54E23C18 /* PBXTargetDependency */,
-				3776D0EF7032AAF39DC4F108F2968FF9 /* PBXTargetDependency */,
 			);
-			name = Pods;
-			productName = Pods;
-			productReference = 76F80F0E19807AF33F1A5EF02CE3E8A5 /* libPods.a */;
+			name = XGFMDBManagers;
+			productName = XGFMDBManagers;
+			productReference = 79A4A50A3A425CA2B72FF405912E3A8D /* libXGFMDBManagers.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -411,75 +815,119 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5E2F52D234CB994148A837762B2C81D1 /* FMDB */,
-				2CEE0C0DE50EB8F675288820D928619C /* MJExtension */,
-				E2399675EDE1187543D3EBFB303A1D46 /* Pods */,
+				ADDD45A17C9934D3BF2EF7A6758DF7A5 /* FMDB */,
+				07D027052539933EEB29DF259EB7551E /* MJExtension */,
+				8167B43F4A670EE8AE226CE30BB07C91 /* Pods */,
+				E6356FE5AF6BFA0AAD8222ACE99D6652 /* XGFMDBManagers */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5229D549DBCD38C84CB49F2C3A008141 /* Sources */ = {
+		729F44F7540BC01A3AE7400B8C0430EA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23FA7F3B9F79F8EEDC14650987495F88 /* Pods-dummy.m in Sources */,
+				FC1294AB0878D166D2A5B3255937AD75 /* MJDictionaryCache.m in Sources */,
+				E8E94D184BD55D6D3BD4E3B77B9F6AFE /* MJExtension-dummy.m in Sources */,
+				F1BA565A1B6B203496DB39CFF5F150B2 /* MJExtensionConst.m in Sources */,
+				70793ED17B0BB2A6CE674A57D4002534 /* MJFoundation.m in Sources */,
+				DE30FB1DC414063D87EF416110CE5167 /* MJProperty.m in Sources */,
+				900F763BD9097E0294B9F338E3DB1F7C /* MJPropertyKey.m in Sources */,
+				DD648401E86B381666C7355F11779EC9 /* MJPropertyType.m in Sources */,
+				01981499054F52505FFDB13E86D96F9B /* NSObject+MJClass.m in Sources */,
+				90D859299F6720B7F010EAD72AE79AF8 /* NSObject+MJCoding.m in Sources */,
+				1AE4E58E1E3328211346A540B953B0E8 /* NSObject+MJKeyValue.m in Sources */,
+				936E841C6EC998BFF52FB5E6FE9E8C1A /* NSObject+MJProperty.m in Sources */,
+				1FC830EC3A396793978D700A3F8E782D /* NSString+MJExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		649A798DF101F7B923854502A1D2CC36 /* Sources */ = {
+		78E0A11D482EC8973B9F54D17BAB8614 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B9D2BC455B3FEEF77DB736715601986 /* FMDB-dummy.m in Sources */,
-				861111C77EBBE39954C93EB292E3B2D9 /* FMDatabase.m in Sources */,
-				170D5EA544FD734196A17B89F382B4C1 /* FMDatabaseAdditions.m in Sources */,
-				0A78F791ABA6CB38C7101D560B8E1B84 /* FMDatabasePool.m in Sources */,
-				A4121A9AAEFD228E3DB4CDFA63937D01 /* FMDatabaseQueue.m in Sources */,
-				DDA08CEB1F71EE705409AAEE8FBB6691 /* FMResultSet.m in Sources */,
+				465A0B012371D514D16A06EA23D3D8DD /* AppDelegate.m in Sources */,
+				D152F9EBF2EB0126C3B8B3E2A15832D9 /* FMDB-dummy.m in Sources */,
+				CAC4C11390875DEEF21CB9ADFA438ED1 /* FMDatabase.m in Sources */,
+				3E503E02BD094650773A0BCD6FB186C7 /* FMDatabaseAdditions.m in Sources */,
+				60A9D59521D9655067A286AE2CEFAFF7 /* FMDatabasePool.m in Sources */,
+				8C40F5AB8F84EADAE6BE0749D7BA2728 /* FMDatabaseQueue.m in Sources */,
+				D41D86AF553D53EF73F5D55A3FE1C3CB /* FMResultSet.m in Sources */,
+				F026700577B30A6D79713B4320C4AB15 /* MJDictionaryCache.m in Sources */,
+				FFD9BB0F9788DD7E800F9102FAAA6B9E /* MJExtension-dummy.m in Sources */,
+				F1A464233C87A83A50D00DEA60732CFC /* MJExtensionConst.m in Sources */,
+				57A423C018A5039AF9C689EDBA9FA73F /* MJFoundation.m in Sources */,
+				E9621C8ECDB08B06B41A6796A9CCD896 /* MJProperty.m in Sources */,
+				968FD1B7E7227C395BB809FADECFABAD /* MJPropertyKey.m in Sources */,
+				B543D2A0C7F319845839F428AF7A7F12 /* MJPropertyType.m in Sources */,
+				BCA2CF63AE1F7AC10978CFBEC2776015 /* MyModel.m in Sources */,
+				894AAD68CB7A15E36AE6FC1F7572695C /* NSObject+MJClass.m in Sources */,
+				1753FC809533D44BC4FE3E842C25D296 /* NSObject+MJCoding.m in Sources */,
+				0CB450CA99F9ABBD869F9BAE836F229F /* NSObject+MJKeyValue.m in Sources */,
+				0947919D3D53C13C37090B331733CA73 /* NSObject+MJProperty.m in Sources */,
+				978DF5B812AA2D56585DB9F8D404548A /* NSString+MJExtension.m in Sources */,
+				BF392915740E6223EE419167A2EAF20F /* Pods-dummy.m in Sources */,
+				852717DFAE38DA3F73757BA91D5D921B /* ViewController.m in Sources */,
+				4CA6CD1508FA892B312C3F5BAA76C321 /* XGFMDBManagers-dummy.m in Sources */,
+				2202015F15B02F99727C15E5186B431B /* XGFMDBManagersTests.m in Sources */,
+				8B70A533CC0046106187B54A671A69B6 /* XGFMDBTool.m in Sources */,
+				E1120C534072F7B4180FDF2B3875F449 /* XGFMItem.m in Sources */,
+				C61E85C4F73CE2970C31FBDB82091A86 /* XGKeyValueItem.m in Sources */,
+				9D3D50E4CFEE03B156CE1BF89E76D78E /* XGKeyValueStore.m in Sources */,
+				DDC2B23F0749DB95EAB7E53832115F58 /* XGModel.m in Sources */,
+				F83385782975AC7CD101CF7D973B8370 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CAE76BDD97B61A9A7FAEEAE22A4FF7DD /* Sources */ = {
+		A24D43E5555EE40E6AE1DE21FF5786A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A51A165A54C9FDA352A0AB211867B16E /* MJDictionaryCache.m in Sources */,
-				DD950ED61B05983A035E73E4931141D8 /* MJExtension-dummy.m in Sources */,
-				3D7AC2D49BE90B99F9238DB7FE357102 /* MJExtensionConst.m in Sources */,
-				400DE90757A8966C0B74D4D35E1BCDB0 /* MJFoundation.m in Sources */,
-				2F8D80590A38C73F058840CCBB6707CE /* MJProperty.m in Sources */,
-				BF09AFBD7656B3CE82089707F8292770 /* MJPropertyKey.m in Sources */,
-				3310C117D1EC208A86DB8A5B2D2ADF98 /* MJPropertyType.m in Sources */,
-				E6771597B4E4523032B8779965EFE71C /* NSObject+MJClass.m in Sources */,
-				69DB12AB604919497FF6628ED7614C80 /* NSObject+MJCoding.m in Sources */,
-				E59D3FA2BD0E9EA42B854290D297DD8E /* NSObject+MJKeyValue.m in Sources */,
-				4ABEA7E8BFB3C3F3F18E75F153479DDC /* NSObject+MJProperty.m in Sources */,
-				3A4E507D98495566460EFF613EB4B2F2 /* NSString+MJExtension.m in Sources */,
+				EC1B4A2B8927DD113A73D1F04E630819 /* FMDB-dummy.m in Sources */,
+				35AB5E617E4EDFCB8CBD925B7C3876AC /* FMDatabase.m in Sources */,
+				A26F7C8859872C33933B599A2FEF8B65 /* FMDatabaseAdditions.m in Sources */,
+				D5AF35C789E29643739F040A35F7E8FC /* FMDatabasePool.m in Sources */,
+				D1F979D01BF7338C2D06E2EF8407BA83 /* FMDatabaseQueue.m in Sources */,
+				BB749F076859C0CD6C0F278FDF9A60CF /* FMResultSet.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8041872615EAA8F7448F28E59514BF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B34B7E4B2CAA10C59D276516DF60873F /* Pods-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3776D0EF7032AAF39DC4F108F2968FF9 /* PBXTargetDependency */ = {
+		4968F95780811A12A653BFF99AC9067D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = MJExtension;
-			target = 2CEE0C0DE50EB8F675288820D928619C /* MJExtension */;
-			targetProxy = 59BB7D12AEC01E21E1B77A9B2245993C /* PBXContainerItemProxy */;
+			name = XGFMDBManagers;
+			target = E6356FE5AF6BFA0AAD8222ACE99D6652 /* XGFMDBManagers */;
+			targetProxy = 4743D0F8E83B944CAB41A7D8695D0E28 /* PBXContainerItemProxy */;
 		};
-		FA871C03063C2110A6B2E56E54E23C18 /* PBXTargetDependency */ = {
+		E614DCBCB524A4C512D77B3C97C73F8A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FMDB;
-			target = 5E2F52D234CB994148A837762B2C81D1 /* FMDB */;
-			targetProxy = C2234170A4B22E93FECAAB51CAEDB32A /* PBXContainerItemProxy */;
+			target = ADDD45A17C9934D3BF2EF7A6758DF7A5 /* FMDB */;
+			targetProxy = 31F079718CDD4F6C88509C3E4E1A6751 /* PBXContainerItemProxy */;
+		};
+		F0E83E480D9F17C9FD9E8D0ED728AE61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MJExtension;
+			target = 07D027052539933EEB29DF259EB7551E /* MJExtension */;
+			targetProxy = 8721CA30EB96BA8918A16390148B7C15 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0C1E2AEDC91B7E0E7896938747C3272A /* Release */ = {
+		02F798A4E24BAB31CC126CCC584AA6DF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1DCD44ECD37CE3800D21CFE26EE03A31 /* MJExtension-Private.xcconfig */;
+			baseConfigurationReference = AD71E824EF29CA4E3D29DAC293EEC84A /* MJExtension-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/MJExtension/MJExtension-prefix.pch";
@@ -493,28 +941,12 @@
 			};
 			name = Release;
 		};
-		37987E154D90627050FD8730AE0535B4 /* Release */ = {
+		08C0CE2656E07A10C064233809B4ABC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 32BC3A0EE7C12FD17FA211402986186D /* FMDB-Private.xcconfig */;
+			baseConfigurationReference = 676EFE06737D8C2F202940DDD9376CBB /* XGFMDBManagers-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FMDB/FMDB-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		382723A7BD967D133C78C584D3A68E30 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1DCD44ECD37CE3800D21CFE26EE03A31 /* MJExtension-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MJExtension/MJExtension-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/XGFMDBManagers/XGFMDBManagers-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
@@ -559,13 +991,13 @@
 			};
 			name = Release;
 		};
-		7D4B0546DCFF51B110A7DEBFED867968 /* Debug */ = {
+		955F4D69227CF9179B0CF063D747EE29 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8790FBC9E23336E7BC1432E2505BE6B8 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 52BA61F0569D5F85005B37AA059CC857 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -573,7 +1005,23 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
-			name = Debug;
+			name = Release;
+		};
+		9D2AEFCD37B5284344225F4530328B85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 676EFE06737D8C2F202940DDD9376CBB /* XGFMDBManagers-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/XGFMDBManagers/XGFMDBManagers-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
 		};
 		AA05AF9C3A14EE0E32F42C6E6D42D34F /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -614,25 +1062,9 @@
 			};
 			name = Debug;
 		};
-		CF6AC2C4343B0E997E11C099E074C56B /* Release */ = {
+		E34AA829869CFBE812086855AAD0550B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 44984FB4E4D424793119D68443594858 /* Pods.release.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		E5E9E228912F9C1E80799F5D1AF3FD4D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 32BC3A0EE7C12FD17FA211402986186D /* FMDB-Private.xcconfig */;
+			baseConfigurationReference = 4CEE4375374E957A3FA0E0A8B588EAB2 /* FMDB-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/FMDB/FMDB-prefix.pch";
@@ -646,14 +1078,71 @@
 			};
 			name = Debug;
 		};
+		E8545538A762CB429D599820CC396DCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CEE4375374E957A3FA0E0A8B588EAB2 /* FMDB-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FMDB/FMDB-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		F4CCAC3D73CDE08AB16DDB93134E4B20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD71E824EF29CA4E3D29DAC293EEC84A /* MJExtension-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MJExtension/MJExtension-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		FE936E19DFE8D41E1127258EE661FC41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 544094F0A0EF7232A28F3626B7DA4BEE /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0A27435F388F0E1E7DEF65A676231297 /* Build configuration list for PBXNativeTarget "FMDB" */ = {
+		0A45F804811C97E2745EACBA4FDA63D6 /* Build configuration list for PBXNativeTarget "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E5E9E228912F9C1E80799F5D1AF3FD4D /* Debug */,
-				37987E154D90627050FD8730AE0535B4 /* Release */,
+				FE936E19DFE8D41E1127258EE661FC41 /* Debug */,
+				955F4D69227CF9179B0CF063D747EE29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2181AB82B93139DD332A123ECF97836A /* Build configuration list for PBXNativeTarget "MJExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4CCAC3D73CDE08AB16DDB93134E4B20 /* Debug */,
+				02F798A4E24BAB31CC126CCC584AA6DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -667,20 +1156,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		64353540475E4857F71F02CCECFCDCF3 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+		4042FC7DC35BCB0E985F957D88691B94 /* Build configuration list for PBXNativeTarget "FMDB" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7D4B0546DCFF51B110A7DEBFED867968 /* Debug */,
-				CF6AC2C4343B0E997E11C099E074C56B /* Release */,
+				E34AA829869CFBE812086855AAD0550B /* Debug */,
+				E8545538A762CB429D599820CC396DCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6FCC6ACB439005BFA90900BF76C598D7 /* Build configuration list for PBXNativeTarget "MJExtension" */ = {
+		8CC47475FDE76B3B77EE97710D07FBFB /* Build configuration list for PBXNativeTarget "XGFMDBManagers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				382723A7BD967D133C78C584D3A68E30 /* Debug */,
-				0C1E2AEDC91B7E0E7896938747C3272A /* Release */,
+				08C0CE2656E07A10C064233809B4ABC5 /* Debug */,
+				9D2AEFCD37B5284344225F4530328B85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

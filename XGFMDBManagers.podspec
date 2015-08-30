@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.author             = { "赵小嘎" => "15110241511@163.com" }
   s.platform     = :ios, "6.0"
   s.source       = { :git => "https://github.com/zhaoxiaoga/XGFMDBManagers.git", :tag => "0.0.1" }
-  s.source_files  = "XGFMDBManagers", "XGFMDBManagers/**/*.{h,m}"
+  s.source_files  = "XGFMDBManagers/XGFMDBManagers/XGDB", "XGFMDBManagers/XGFMDBManagers/**/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
   s.requires_arc = true
 end

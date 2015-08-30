@@ -1,2 +1,4 @@
 pod 'FMDB', '~> 2.5'
 pod 'MJExtension', '~> 2.5.9'
+pod 'XGFMDBManagers', :git => 'https://github.com/zhaoxiaoga/XGFMDBManagers.git'
+

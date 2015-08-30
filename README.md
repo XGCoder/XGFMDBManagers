@@ -21,6 +21,8 @@
  
   如何使用: 
  
-        使用 这个数据库需要引入XGDB文件夹 中的 几个类
+        使用 这个数据库需要依赖FMDB第三方库  并且引入XGDB文件夹 中的 几个类
  
-        对外使用 只需用XGFMDBTool 就OK  查询 数据 返回的数据都是XGKeyValueItem 模型 其中的itemResult 就是所存储的数据
+        对外使用 只需用XGFMDBTool 就OK  
+        
+        查询数据 返回的数据都是XGKeyValueItem 模型 其中的itemResult 就是所存储的数据

@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "XGFMDBManagers"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "自己封装的FMDB 字典 模型 字符串 随便存 随便取"
   s.homepage     = "https://github.com/zhaoxiaoga/XGFMDBManagers"
   s.license      = "MIT"

@@ -1,7 +1,12 @@
 # XGFMDBManagers
-自己封装的FMDB 字典 模型 字符串 随便存 随便取
+ 自己封装的FMDB   字典 模型 字符串 随便存 随便取
 
-
+ 之前测试存储模型没问问题 但是近期测试存储模型有点问题 
+ 
+ 暂时请勿存储模型 其余数据都可以存储  (代码已更改 存储模型会提示需要遵守coding协议)
+ 
+ 本数据库支持字段查询 自定义查询  排序
+ 
   思路:
                
                 这个数据库 思路 借鉴了 猿题库开源数据库https://github.com/yuantiku/YTKKeyValueStore Key  Value的思路

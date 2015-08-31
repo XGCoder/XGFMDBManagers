@@ -151,7 +151,7 @@ static NSString *const SELECT_MOSAIC_TIME_SQL = @"order by ";
 - (NSString * )returnInsertFiledWithData:(id)obj
 {
     if (![XGKeyValueStore isClassFromFoundation:[obj class]]) {
-        return updateDicmodel;
+        return updateObject;
     }else{
         return updateObject;
     }

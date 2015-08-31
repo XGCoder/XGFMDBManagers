@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "XGKeyValueItem.h"
 /*
+        存储模型有点问题 暂时请勿存储模型 其余数据都可以存储
+ 
+ 
  思路:
  
              这个数据库 思路 借鉴了 猿题库开源数据库https://github.com/yuantiku/YTKKeyValueStore Key  Value的思路

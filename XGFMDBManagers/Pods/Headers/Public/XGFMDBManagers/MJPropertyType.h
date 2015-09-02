@@ -1,1 +1,0 @@
-../../../XGFMDBManagers/XGFMDBManagers/Pods/MJExtension/MJExtension/MJPropertyType.h

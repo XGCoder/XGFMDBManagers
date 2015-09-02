@@ -1,1 +1,0 @@
-../../../XGFMDBManagers/XGFMDBManagers/XGFMDBManagers/AppDelegate.h

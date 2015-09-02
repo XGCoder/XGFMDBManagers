@@ -5,25 +5,13 @@ PODS:
   - FMDB/standard (2.5):
     - FMDB/common
   - MJExtension (2.5.9)
-  - XGFMDBManagers (0.0.1)
 
 DEPENDENCIES:
   - FMDB (~> 2.5)
   - MJExtension (~> 2.5.9)
-  - XGFMDBManagers (from `https://github.com/zhaoxiaoga/XGFMDBManagers.git`)
-
-EXTERNAL SOURCES:
-  XGFMDBManagers:
-    :git: https://github.com/zhaoxiaoga/XGFMDBManagers.git
-
-CHECKOUT OPTIONS:
-  XGFMDBManagers:
-    :commit: 1a1df5c04f42344622ddff300694d119cf911717
-    :git: https://github.com/zhaoxiaoga/XGFMDBManagers.git
 
 SPEC CHECKSUMS:
   FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
   MJExtension: 2330aeb6c83428c820749290bf766e81827cda65
-  XGFMDBManagers: 9d71e8c4557db9f6417f61031ac59754552fda58
 
 COCOAPODS: 0.38.2

@@ -55,12 +55,12 @@ static NSString *const INSERT_CUSTOM_ITEM_SQL = @"REPLACE INTO %@ (id, json, dic
 // 删
 static NSString *const CLEAR_ALL_SQL = @"DELETE from %@";
 static NSString *const DELETE_LAST_ITEM_SQL = @"DELETE  from %@ where id = (select id from %@ order by createdTime) ";
-static NSString *const DELETE_ITEM_SQL = @"DELETE from %@ where id = ?";
+static NSString *const DELETE_ITEM_SQL = @"DELETE from %@ where id = '?'";
 static NSString *const DELETE_ITEMS_SQL = @"DELETE from %@ where id in ( %@ )";
 
 // 更新 数据  插入数据时间永远不变
-static NSString *const UPDATE_CUSTOM_ITEM_SQL = @"UPDATE %@ set %@ = ? WHERE id = ?";
-static NSString *const UPDATE_ONECONDITON_ITEM_SQL = @"UPDATE %@ set %@ = ? WHERE id = ?";
+static NSString *const UPDATE_CUSTOM_ITEM_SQL = @"UPDATE %@ set %@ = ? WHERE id = '?'";
+static NSString *const UPDATE_ONECONDITON_ITEM_SQL = @"UPDATE %@ set %@ = ? WHERE id = '?'";
 
 //根据条件查询
 static NSString *const SELECT_CONDITION_ITEM_SQL = @"SELECT * from ";
@@ -450,7 +450,7 @@ static NSString *const SELECT_MOSAIC_TIME_SQL = @"order by ";
 - (id)getobjById:(NSString *)Id fromTable:(NSString *)tableName;
 {
     
-    NSArray * array = [self getObjItemWithSearchCondition:[NSString stringWithFormat:@"id = %@",Id] Count:1 fromTable:tableName];
+    NSArray * array = [self getObjItemWithSearchCondition:[NSString stringWithFormat:@"id = '%@'",Id] Count:1 fromTable:tableName];
     if (array) {
         return [array lastObject];
     }
@@ -517,7 +517,7 @@ static NSString *const SELECT_MOSAIC_TIME_SQL = @"order by ";
     }
     NSString * sql;
     if (objId) {
-        sql = [NSString stringWithFormat:@"%@ %@ where createdTime < (select createdTime from %@ where id= %@) %@",SELECT_CONDITION_ITEM_SQL,tableName,tableName,objId,selectOrder];
+        sql = [NSString stringWithFormat:@"%@ %@ where createdTime < (select createdTime from %@ where id= '%@') %@",SELECT_CONDITION_ITEM_SQL,tableName,tableName,objId,selectOrder];
     }else{
         sql =[NSString stringWithFormat:@"%@ %@ %@",SELECT_CONDITION_ITEM_SQL,tableName,selectOrder];
     }

@@ -126,4 +126,9 @@
     NSArray * array =  [self.tool getObjectByType:type fromTable:DEFAULT_XG_TABLE_NAME];
     NSLog(@" get with type array  %@",array);
 }
+
+/*
+ 我是测试数据我是测试数据我是测试数据我是测试数据我是测试数据我是测试数据我是测试数据
+ 
+ */
 @end

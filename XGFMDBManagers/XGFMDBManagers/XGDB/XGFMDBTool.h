@@ -187,8 +187,14 @@ static int  XG_DEFAUL_INSERT_COUNT = 50;
 
 
 
+
 /**
- *  获取这个表格的所有数据 (默认根据插入时间排序)
+ *   获取这个表格的所有数据  (根据传入数据库的pos 字段排序) 可以利用下面的方法
+ */
+- (NSArray *) getAllObjsWithPositionFromTable:(NSString *)fromTable;
+
+/**
+ *  获取这个表格的所有数据 (数组里面包含着 XGKeyValueItem 模型)
  *
  *  @param fromTable  数据表
  *
@@ -197,16 +203,33 @@ static int  XG_DEFAUL_INSERT_COUNT = 50;
 - (NSArray *) getAllObjsFromTable:(NSString *)fromTable;
 
 /**
- *   获取这个表格的所有数据  根据传入数据库的pos 字段排序
+ *  获取这个表格的所有数据 (不是模型 直接可以获取 存入时的数据)
+ *
+ *  @param fromTable  数据表
+ *
+ *  @return 所有数据
  */
-- (NSArray *) getAllObjsWithPositionFromTable:(NSString *)fromTable;
-
+- (NSMutableArray *) getAllObjsOnlyResultFromTable:(NSString *)fromTable;
 
 
 /**
  *  返回数据库中的最后一条数据
  */
 - (id)getLastObjFromTable:(NSString *)fromeTable;
+
+
+/**
+ *  获取 给表里最新的count条数据(数组里面包含的数据是 XGKeyValueItem 模型)
+ */
+- (NSArray *)getObjWithCount:(int)count fromTable:(NSString *)fromTable;
+
+/**
+ *  获取 给表里最新的count条数据  (数组里面包含的 不是模型 直接可以获取 存入时的数据)
+ */
+- (NSMutableArray *)getObjOnlyResultWithCount:(int)count fromTable:(NSString *)fromTable;
+
+
+
 
 /**
  *  返回某个表格 一共多少条数据

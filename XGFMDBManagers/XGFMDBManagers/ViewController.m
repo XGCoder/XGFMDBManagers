@@ -50,7 +50,7 @@
                         @"5555",
                         ];
     
-    for (int i = 0;  i < 50; i ++) {
+    for (int i = 0;  i < 500; i ++) {
         NSString * objid = [NSString stringWithFormat:@"%d",i +1 ];
         NSDictionary * dic = @{
                                @"age":@"13",
@@ -116,8 +116,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)getAllObjsFromTable{
-    NSArray * array = [self.tool getAllObjsFromTable:DEFAULT_XG_TABLE_NAME];
+- (void)getAllObjsFromTable{//取出的 不是模型是数据
+    NSArray * array = [self.tool getAllObjsOnlyResultFromTable:DEFAULT_XG_TABLE_NAME];
     NSLog(@"array %@",array);
 }
 

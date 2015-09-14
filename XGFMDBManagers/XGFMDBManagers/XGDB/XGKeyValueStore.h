@@ -140,6 +140,10 @@ static NSString *const  updateText3  = @"text3";
  *  selectOrder 需要根据数据库的什么字段排序 如果为nil 默认用传入时间
  */
 - (NSArray *)getObjItemsWithobjId:(NSString *)objId Count:(int)count selectOrder:(NSString *)selectOrder fromTable:(NSString *)tableName;
+/**
+ *   取出某个表里面的最新的count条数据
+ */
+- (NSArray *)getAnyCount:(int)count fromTable:(NSString *)tableName;
 
 
 /**

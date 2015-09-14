@@ -449,7 +449,8 @@ static NSString *const SELECT_MOSAIC_TIME_SQL = @"order by ";
  */
 - (id)getobjById:(NSString *)Id fromTable:(NSString *)tableName;
 {
-    
+    [self createCustomTableWithName:tableName];
+
     NSArray * array = [self getObjItemWithSearchCondition:[NSString stringWithFormat:@"id = '%@'",Id] Count:1 fromTable:tableName];
     if (array) {
         return [array lastObject];
@@ -467,6 +468,8 @@ static NSString *const SELECT_MOSAIC_TIME_SQL = @"order by ";
  */
 - (NSArray *)getObjItemWithSearchCondition:(NSString *)Condition Count:(int)count fromTable:(NSString *)tableName;
 {
+    [self createCustomTableWithName:tableName];
+
     if ([XGKeyValueStore checkTableName:tableName] == NO) {
         return nil;
     }
@@ -496,7 +499,8 @@ static NSString *const SELECT_MOSAIC_TIME_SQL = @"order by ";
  */
 - (NSArray *)getObjItemsWithobjId:(NSString *)objId Count:(int)count fromTable:(NSString *)tableName;
 {
-    
+    [self createCustomTableWithName:tableName];
+
     NSArray * array = [self getObjItemsWithobjId:objId Count:count selectOrder:nil fromTable:tableName];
     if (array) {
         return array;
@@ -506,6 +510,8 @@ static NSString *const SELECT_MOSAIC_TIME_SQL = @"order by ";
 
 - (NSArray *)getObjItemsWithobjId:(NSString *)objId Count:(int)count selectOrder:(NSString *)selectOrder fromTable:(NSString *)tableName;
 {
+    [self createCustomTableWithName:tableName];
+
     if ([XGKeyValueStore checkTableName:tableName] == NO) {
         return nil;
     }
@@ -517,9 +523,9 @@ static NSString *const SELECT_MOSAIC_TIME_SQL = @"order by ";
     }
     NSString * sql;
     if (objId) {
-        sql = [NSString stringWithFormat:@"%@ %@ where createdTime < (select createdTime from %@ where id= '%@') %@",SELECT_CONDITION_ITEM_SQL,tableName,tableName,objId,selectOrder];
+        sql = [NSString stringWithFormat:@"%@ %@ where createdTime < (select createdTime from %@ where id= '%@') %@",SELECT_CONDITION_ITEM_SQL,tableName,tableName,objId,select_Order];
     }else{
-        sql =[NSString stringWithFormat:@"%@ %@ %@",SELECT_CONDITION_ITEM_SQL,tableName,selectOrder];
+        sql =[NSString stringWithFormat:@"%@ %@ %@",SELECT_CONDITION_ITEM_SQL,tableName,select_Order];
     }
     if (count) {
         sql = [NSString stringWithFormat:@"%@ Limit %d",sql,count];
@@ -535,7 +541,8 @@ static NSString *const SELECT_MOSAIC_TIME_SQL = @"order by ";
  *  读取某个表中所有的数据
  */
 - (NSArray *)getAllItemsFromTable:(NSString *)tableName {
-   
+    [self createCustomTableWithName:tableName];
+
     NSArray * result = [self getObjItemsWithobjId:nil Count:0 fromTable:tableName];
     if (result) {
         return result;
@@ -544,7 +551,19 @@ static NSString *const SELECT_MOSAIC_TIME_SQL = @"order by ";
     return nil;
 }
 
+/**
+ *   取出某个表里面的最新的count条数据
+ */
+- (NSArray *)getAnyCount:(int)count fromTable:(NSString *)tableName;
+{
+    [self createCustomTableWithName:tableName];
 
+    NSArray * result = [self getObjItemsWithobjId:nil Count:count fromTable:tableName];
+    if (result) {
+        return result;
+    }
+    return nil;
+}
 
 - (NSArray *)getItemsWithSQL:(NSString *)sql
 {

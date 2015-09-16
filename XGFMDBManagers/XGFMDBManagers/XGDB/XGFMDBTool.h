@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "XGKeyValueItem.h"
 /*
-        存储模型有点问题 暂时请勿存储模型 其余数据都可以存储
+ 
+ 声明:
+          经过系统地测试 存储模型有点问题 暂时请勿存储模型 其余数据都可以存储  代码已更改 如果存储模型会提示需要遵守 NSCoding 协议
  
  
  思路:
@@ -38,6 +40,9 @@
              
              查询数据 返回的数据都是XGKeyValueItem 模型 其中的itemResult 就是所存储的数据
 
+             经过优化 在不更改原有接口的前提下 查询数据方法中增加 直接返回 存储的数据 方法
+                     具体情况 看XGFMDBTool.h各个方法注释
+ 
              id  pos 必传      pos(辅助主键) 可以读取数据时排序使用
  
  */

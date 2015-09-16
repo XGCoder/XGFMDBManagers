@@ -261,16 +261,15 @@ static XGFMDBTool *sharedFMDBManager = nil;
 - (NSArray *)getLastTenDBObjectById:(NSString *)objectId fromTable:(NSString *)tableName;
 {
     if (objectId == nil){
-        XGKeyValueItem * item = [self getLastObjFromTable:tableName];
-        return [self.storeManger getObjItemsWithobjId:item.itemId Count:10 fromTable:tableName];
+        return [self.storeManger getAllItemsFromTable:tableName];
     }else{
         return  [self.storeManger getObjItemsWithobjId:objectId Count:10 fromTable:tableName];
     }
+
     
     return nil;
     
 }
-
 /**
  *  获取这个表格的所有数据
  *
@@ -283,18 +282,23 @@ static XGFMDBTool *sharedFMDBManager = nil;
     return [self.storeManger getAllItemsFromTable:fromTable];
 }
 
-/**
- *   获取这个表格的所有数据  根据传入数据库的pos 字段
- */
-- (NSArray *) getAllObjsWithPositionFromTable:(NSString *)fromTable;
+- (NSMutableArray *)getAllObjsOnlyResultFromTable:(NSString *)fromTable
 {
-    return [self.storeManger getObjItemsWithobjId:nil Count:0 selectOrder:updatePosition fromTable:fromTable];
-
+    NSArray * allObjArray = [self getAllObjsFromTable:fromTable];
+    NSMutableArray * relustArray = [NSMutableArray array];
+    for (XGKeyValueItem * item  in allObjArray) {
+        [relustArray addObject:item.itemResult];
+    }
+    if (relustArray) {
+        return relustArray;
+    }else{
+        return nil;
+    }
 }
 
-- (id)getLastObjFromTable:(NSString *)fromeTable;
+- (id)getLastObjFromTable:(NSString *)fromTable;
 {
-    NSArray * myArray = [self getAllObjsFromTable:fromeTable];
+    NSArray * myArray = [self getObjWithCount:1 fromTable:fromTable];
     
     if (myArray.count) {
         return [myArray objectAtIndex:0];
@@ -302,6 +306,30 @@ static XGFMDBTool *sharedFMDBManager = nil;
         return nil;
     }
     return nil;
+}
+
+- (NSArray * )getObjWithCount:(int)count fromTable:(NSString *)fromTable
+{
+    NSArray * array = [self.storeManger getAnyCount:count fromTable:fromTable];
+    if (array.count) {
+        return array;
+    }else{
+        return nil;
+    }
+}
+
+- (NSMutableArray *)getObjOnlyResultWithCount:(int)count fromTable:(NSString *)fromTable;
+{
+    NSMutableArray * muArray = [NSMutableArray array];
+    NSArray *  array = [self getObjWithCount:count fromTable:fromTable];
+    for (XGKeyValueItem * item in array) {
+        [muArray addObject:item.itemResult];
+    }
+    if (array.count) {
+        return muArray;
+    }else{
+        return nil;
+    }
 }
 
 - (NSUInteger)getObjCountFromTable:(NSString *)fromTable;

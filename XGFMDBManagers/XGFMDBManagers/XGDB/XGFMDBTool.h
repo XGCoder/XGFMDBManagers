@@ -196,7 +196,7 @@ static int  XG_DEFAUL_INSERT_COUNT = 50;
 /**
  *   获取这个表格的所有数据  (根据传入数据库的pos 字段排序) 可以利用下面的方法
  */
-- (NSArray *) getAllObjsWithPositionFromTable:(NSString *)fromTable;
+//- (NSArray *) getAllObjsWithPositionFromTable:(NSString *)fromTable;
 
 /**
  *  获取这个表格的所有数据 (数组里面包含着 XGKeyValueItem 模型)

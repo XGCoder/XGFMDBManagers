@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.name         = "XGFMDBManagers"
   s.version      = "0.0.3"
   s.summary      = "自己封装的FMDB 数据 随便存 随便取
-		    声明: 使用前先查看 README.md 文件"
+		    声明: 使用前请先查看 README.md 文件"
   s.homepage     = "https://github.com/zhaoxiaoga/XGFMDBManagers"
   s.license      = "MIT"
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }

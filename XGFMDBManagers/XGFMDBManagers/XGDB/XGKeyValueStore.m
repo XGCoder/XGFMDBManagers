@@ -327,11 +327,8 @@ static NSString *const ORDER_BY_DESC = @"order by %@ desc";
         
     }];
     if (!result) {
-        debugLog(@"ERROR, 删除数据时出错 table: %@", tableName);
+        debugLog(@"ERROR, 删除数据时出错 table: %@  您已引发bug 出错 : %@", tableName,condition);
         
-        NSString *errStr = [NSString
-                            stringWithFormat:@"您已引发bug 出错 : %@", condition];
-        debugLog(@"%@", errStr);
     } else {
         debugLog(@"error :删除了数据: %@", sql);
     }

@@ -11,7 +11,7 @@
 /*
  
  声明:
-          经过系统地测试 存储模型有点问题 暂时请勿存储模型 其余数据都可以存储  代码已更改 如果存储模型会提示需要遵守 NSCoding 协议
+          经过系统地测试 存储模型有点问题 请勿存储模型 其余数据都可以存储  代码已更改 如果存储模型会提示需要遵守 NSCoding 协议
  
  
  思路:
@@ -43,7 +43,7 @@
              经过优化 在不更改原有接口的前提下 查询数据方法中增加 直接返回 存储的数据 方法
                      具体情况 看XGFMDBTool.h各个方法注释
  
-             id  pos 必传      pos(辅助主键) 可以读取数据时排序使用
+             id  pos 必传      pos 可以读取数据时排序使用
  
  */
 
@@ -58,6 +58,14 @@ static int  XG_DEFAUL_INSERT_COUNT = 50;
 @interface XGFMDBTool : NSObject
 
 + (XGFMDBTool *)sharedFMDBManager;
+
+/**
+ *  创建 库 (一般 登录 使用到)
+ *
+ *  @param tableName
+ */
+- (void)createCustomDBWithName:(NSString *)tableName;
+
 
 //-----------------------------------------------------------------------增
 /**
@@ -165,15 +173,13 @@ static int  XG_DEFAUL_INSERT_COUNT = 50;
  *
  *  @param objectId  objectID
  *  @param tableName 表格名
- *
- *  @return 返回数据是json
  */
 - (id)getDBObjectById:(NSString *)objectId
             fromTable:(NSString *)tableName;
 
 /**
  *  通过type 筛选
- *  @return 筛选后排列 的数组
+ *  @return 筛选后排列 的数组  (里面是 XGKeyValueItem 模型)
  */
 - (NSArray *)getObjectByType:(NSString *)type
                    fromTable:(NSString *)tableName;
@@ -181,22 +187,41 @@ static int  XG_DEFAUL_INSERT_COUNT = 50;
 
 /**
  *  根据某条数据id 获取之前10条的数据 (用于上拉刷新)(倒序 时间早的在后面)
- *  (根据插入时间进行排序的  所以如果有顺序需求 尽量不要用这个方法) 后期会完善增加方法
  *
  *  @param objectId  上拉刷新最后一条id
  *  @param tableName 表格名
- *  @return 返回数组 (后10条数据 数组)数组 里面全是 XGKeyValueItem 模型
+ *  @return 返回数组 (后10条数据 数组)数组 里面是 XGKeyValueItem 模型
  */
 - (NSArray *)getLastTenDBObjectById:(NSString *)objectId
                           fromTable:(NSString *)tableName;
 
 
+/**
+ *  根据某条数据id 获取之后10条的新数据 (用于下拉刷新)(倒序 时间早的在后面)
+ *
+ *  @param objectId  上拉刷新最后一条id
+ *  @param tableName 表格名
+ *
+ *  @return 返回数组 (后10条数据 数组)数组 里面是 XGKeyValueItem 模型
+ */
+- (NSArray *)getNewTenObjectById:(NSString *)objectId
+                       fromTable:(NSString *)tableName;
+
 
 
 /**
- *   获取这个表格的所有数据  (根据传入数据库的pos 字段排序) 可以利用下面的方法
+ *  根据条件获取数据列表
+ *
+ *  @param condition 条件
+ *  @param tableName 表名
+ *
+ *  @return NSArrayList
  */
-//- (NSArray *) getAllObjsWithPositionFromTable:(NSString *)fromTable;
+- (NSArray *)getNewTenObjectByCondition:(NSString *)condition
+                              fromTable:(NSString *)tableName;
+
+
+
 
 /**
  *  获取这个表格的所有数据 (数组里面包含着 XGKeyValueItem 模型)
@@ -208,7 +233,7 @@ static int  XG_DEFAUL_INSERT_COUNT = 50;
 - (NSArray *) getAllObjsFromTable:(NSString *)fromTable;
 
 /**
- *  获取这个表格的所有数据 (不是模型 直接可以获取 存入时的数据)
+ *  获取这个表格的所有数据 (不是XGKeyValueItem模型 直接可以获取 存入时的数据)
  *
  *  @param fromTable  数据表
  *
@@ -218,7 +243,7 @@ static int  XG_DEFAUL_INSERT_COUNT = 50;
 
 
 /**
- *  返回数据库中的最后一条数据
+ *  返回数据库中的最后一条数据 (XGKeyValueItem 模型)
  */
 - (id)getLastObjFromTable:(NSString *)fromeTable;
 
@@ -226,14 +251,14 @@ static int  XG_DEFAUL_INSERT_COUNT = 50;
 /**
  *  获取 给表里最新的count条数据(数组里面包含的数据是 XGKeyValueItem 模型)
  */
-- (NSArray *)getObjWithCount:(int)count fromTable:(NSString *)fromTable;
+- (NSArray *)getObjWithCount:(int)count
+                   fromTable:(NSString *)fromTable;
 
 /**
- *  获取 给表里最新的count条数据  (数组里面包含的 不是模型 直接可以获取 存入时的数据)
+ *  获取 给表里最新的count条数据  (数组里面包含的 不是XGKeyValueItem模型 直接可以获取 存入时的数据)
  */
-- (NSMutableArray *)getObjOnlyResultWithCount:(int)count fromTable:(NSString *)fromTable;
-
-
+- (NSMutableArray *)getObjOnlyResultWithCount:(int)count
+                                    fromTable:(NSString *)fromTable;
 
 
 /**

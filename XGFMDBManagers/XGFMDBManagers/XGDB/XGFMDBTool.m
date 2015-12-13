@@ -10,7 +10,8 @@
 #import "XGKeyValueStore.h"
 
 //默认数据库名称
-static NSString *const DEFAULT_XG_DB_NAME = @"XG_hbb.sqlite";
+static NSString *const DEFAULT_XG_DB_NAME = @"XGFMDBStore.sqlite";
+//TODO : 可以在此处修改 默认库名称
 
 
 
@@ -31,6 +32,17 @@ static XGFMDBTool *sharedFMDBManager = nil;
         sharedFMDBManager =[[XGFMDBTool alloc] init];
     });
     return sharedFMDBManager;
+}
+
+- (void)createCustomDBWithName:(NSString *)tableName;
+{
+    if (tableName.length) {
+        _storeManger = [[XGKeyValueStore alloc] initDBWithName:tableName];
+    } else {
+        _storeManger = [[XGKeyValueStore alloc]
+                        initDBWithName:
+                        DEFAULT_XG_DB_NAME];
+    }
 }
 
 
@@ -189,6 +201,17 @@ static XGFMDBTool *sharedFMDBManager = nil;
 {
     [self.storeManger clearTable:tableName];
 }
+
+/**
+ *  通过 自定义条件筛选数据 然后删除
+ *
+ *  @param condition 类似于 "id＝xx and name=xx"
+ *  @param tableName     数据库表格
+ */
+- (void)deleteObjByCondition:(NSString *)condition fromTable:(NSString *)tableName{
+    [self.storeManger deleteObjByCondition:condition fromTable:tableName];
+}
+
 //--------------------------------------------------------------------------改
 
 /**
@@ -206,11 +229,17 @@ static XGFMDBTool *sharedFMDBManager = nil;
 {
     if (objectId == nil) return ;
     
-    [self.storeManger updateWithId:objectId Object:obj type:type position:position intoTable:fromTable];
+    [self.storeManger updateWithId:objectId
+                            Object:obj
+                              type:type
+                          position:position
+                         intoTable:fromTable];
 }
 
 
-- (void)updateDbByIdArray:(NSArray *)IdArray WithObjectArray:(NSArray *)objArray fromTable:(NSString *)fromTable;
+- (void)updateDbByIdArray:(NSArray *)IdArray
+          WithObjectArray:(NSArray *)objArray
+                fromTable:(NSString *)fromTable;
 {
     if (IdArray.count != objArray.count) return;
     
@@ -218,7 +247,8 @@ static XGFMDBTool *sharedFMDBManager = nil;
         if ([IdArray objectAtIndex:i] == nil) return;
         //        if ([objArray objectAtIndex:i] == nil) return;
         
-        //        [self updateDbById:[IdArray objectAtIndex:i] WithObject:[objArray objectAtIndex:i] fromTable:fromTable];
+//        [self updateDbById:[IdArray objectAtIndex:i]
+//              WithObject:[objArray objectAtIndex:i] fromTable:fromTable];
     }
     
 }
@@ -248,8 +278,12 @@ static XGFMDBTool *sharedFMDBManager = nil;
 - (NSArray *)getObjectByType:(NSString *)type fromTable:(NSString *)tableName;
 {
     if (type == nil) return nil;
-    return [self.storeManger getObjItemWithSearchCondition:updateType Count:0 fromTable:tableName];
+    return [self.storeManger getObjItemWithSearchCondition:updateType
+                                                     Count:0
+                                                 fromTable:tableName];
 }
+
+
 /**
  *  根据某条数据id 获取之前10条的数据 (用于上拉刷新)(倒序 时间早的在后面)
  *
@@ -260,16 +294,41 @@ static XGFMDBTool *sharedFMDBManager = nil;
  */
 - (NSArray *)getLastTenDBObjectById:(NSString *)objectId fromTable:(NSString *)tableName;
 {
-    if (objectId == nil){
+    if (objectId == nil || [objectId isEqualToString:@"(null)"]){
         return [self.storeManger getAllItemsFromTable:tableName];
     }else{
-        return  [self.storeManger getObjItemsWithobjId:objectId Count:10 fromTable:tableName];
+        return  [self.storeManger getObjItemsWithobjId:objectId
+                                                 Count:10
+                                             fromTable:tableName];
     }
-
-    
     return nil;
     
 }
+
+- (NSArray *)getNewTenObjectById:(NSString *)objectId
+                       fromTable:(NSString *)tableName;
+{
+    
+    if (objectId == nil || [objectId isEqualToString:@"(null)"]) {
+        return nil;
+    } else {
+        return [self.storeManger getNewObjItemsWithobjId:objectId
+                                                   Count:10
+                                               fromTable:tableName];
+    }
+    
+    return nil;
+}
+
+
+
+- (NSArray *)getNewTenObjectByCondition:(NSString *)condition
+                              fromTable:(NSString *)tableName{
+    return [self.storeManger getObjItemWithSearchCondition:condition
+                                                     Count:100
+                                                 fromTable:tableName];
+}
+
 /**
  *  获取这个表格的所有数据
  *
@@ -317,6 +376,23 @@ static XGFMDBTool *sharedFMDBManager = nil;
         return nil;
     }
 }
+
+
+- (NSArray *)getObjWithCount:(int)count
+                   fromTable:(NSString *)fromTable
+                      descBy:(NSString *)columnName
+{
+    NSArray *array = [self.storeManger getAnyCount:count
+                                         fromTable:fromTable
+                                            descBy:columnName];
+    if (array.count) {
+        return array;
+    } else {
+        return nil;
+    }
+}
+
+
 
 - (NSMutableArray *)getObjOnlyResultWithCount:(int)count fromTable:(NSString *)fromTable;
 {

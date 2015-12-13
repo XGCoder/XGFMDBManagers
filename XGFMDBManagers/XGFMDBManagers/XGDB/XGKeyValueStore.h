@@ -13,6 +13,7 @@
 static NSString *const  updateId = @"id";
 static NSString *const  updateObject =  @"json";
 static NSString *const  updateDicmodel =  @"dicModel";
+static NSString *const  updateCreatedTime = @"createdTime";
 static NSString *const  updateType = @"type";
 static NSString *const  updatePosition = @"position";
 static NSString *const  updateText1  = @"text1";
@@ -49,6 +50,18 @@ static NSString *const  updateText3  = @"text3";
                text2:(NSString *)text2
                text3:(NSString *)text3;
 
+
+- (void)insertwithId:(NSString *)objectId
+              Object:(id)object
+                type:(NSString *)type
+            position:(NSString *)position
+         createdTime:(NSString *)createdTime
+           intoTable:(NSString *)tableName
+            maxCount:(int)maxCount
+               text1:(NSString *)text1
+               text2:(NSString *)text2
+               text3:(NSString *)text3;
+
 /**
  *  增加一条数据    id  object pos 不能为空
  */
@@ -59,13 +72,13 @@ static NSString *const  updateText3  = @"text3";
            intoTable:(NSString *)tableName
             maxCount:(int)maxCount;
 ///----------------删
+-(void)deleteObjByCondition:(NSString *)condition fromTable:(NSString *)tableName;
 
 - (void)deleteObjectById:(NSString *)objectId fromTable:(NSString *)tableName;
 
 - (void)deleteObjectsByIdArray:(NSArray *)objectIdArray fromTable:(NSString *)tableName;
 
 ///----------------改
-// 如果存储的是模型 如果想用字典替换  这个可能不会支持 默认支持 模型
 
 /**
  *  修改一条数据    id  object pos 不能为空
@@ -75,6 +88,8 @@ static NSString *const  updateText3  = @"text3";
                 type:(NSString *)type
             position:(NSString *)position
            intoTable:(NSString *)tableName;
+
+
 /**
  *  修改一条数据
  */
@@ -86,8 +101,18 @@ static NSString *const  updateText3  = @"text3";
                text1:(NSString *)text1
                text2:(NSString *)text2
                text3:(NSString *)text3;
-
-
+/**
+ *  修改一条 数据
+ */
+- (void)updateWithId:(NSString *)objectId
+              Object:(id)object
+                type:(NSString *)type
+         createdTime:(NSString *)createdTime
+            position:(NSString *)position
+           intoTable:(NSString *)tableName
+               text1:(NSString *)text1
+               text2:(NSString *)text2
+               text3:(NSString *)text3;
 
 /**
  *  根据 id 修改某个字段  传的参数不能为空
@@ -133,18 +158,23 @@ static NSString *const  updateText3  = @"text3";
  */
 - (NSArray *)getObjItemsWithobjId:(NSString *)objId Count:(int)count fromTable:(NSString *)tableName;
 
+
 /**
- *  从 objId 位置开始 获取一定数目的数据
+ *  从 objId 位置开始 往前 获取一定数目的数据
  *  objId 不能为nil  id 如果为空 就是表中所有的数据
  *  count 如果为空默认是从id之后的所有的数据
- *  selectOrder 需要根据数据库的什么字段排序 如果为nil 默认用传入时间
  */
-- (NSArray *)getObjItemsWithobjId:(NSString *)objId Count:(int)count selectOrder:(NSString *)selectOrder fromTable:(NSString *)tableName;
+- (NSArray *)getNewObjItemsWithobjId:(NSString *)objId Count:(int)count fromTable:(NSString *)tableName;
+
 /**
  *   取出某个表里面的最新的count条数据
  */
 - (NSArray *)getAnyCount:(int)count fromTable:(NSString *)tableName;
 
+/**
+ *   取出某个表里面的最新的count条数据 并且降序排序
+ */
+- (NSArray *)getAnyCount:(int)count fromTable:(NSString *)tableName descBy:(NSString *)columnName;
 
 /**
  *  自己写sql (只限)查询数据

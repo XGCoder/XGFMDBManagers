@@ -21,7 +21,9 @@
 #define debugError()
 #endif
 
-#define PATH_OF_DOCUMENT    [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
+#define PATH_OF_DOCUMENT    \
+    [NSSearchPathForDirectoriesInDomains(   \
+        NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
 
 
 
@@ -46,7 +48,7 @@ text3 TEXT, \
 PRIMARY KEY(id)) \
 ";
 
-static NSString *const DEFAULT_DB_NAME = @"database.sqlite";
+static NSString *const DEFAULT_DB_NAME = @"XGFMDBStore.sqlite";
 
 
 // 插入 (直接覆盖)
@@ -57,18 +59,23 @@ static NSString *const CLEAR_ALL_SQL = @"DELETE from %@";
 static NSString *const DELETE_LAST_ITEM_SQL = @"DELETE  from %@ where id = (select id from %@ order by createdTime) ";
 static NSString *const DELETE_ITEM_SQL = @"DELETE from %@ where id = '?'";
 static NSString *const DELETE_ITEMS_SQL = @"DELETE from %@ where id in ( %@ )";
+static NSString *const DELETE_ITEMS_SQL_WITH_CONDITION = @"DELETE from %@ where %@";
+
 
 // 更新 数据  插入数据时间永远不变
-static NSString *const UPDATE_CUSTOM_ITEM_SQL = @"UPDATE %@ set %@ = ? WHERE id = '?'";
+static NSString *const UPDATE_CUSTOM_ITEM_SQL =      @"UPDATE %@ set %@ = ? WHERE id = '?'";
 static NSString *const UPDATE_ONECONDITON_ITEM_SQL = @"UPDATE %@ set %@ = ? WHERE id = '?'";
+
 
 //根据条件查询
 static NSString *const SELECT_CONDITION_ITEM_SQL = @"SELECT * from ";
 
 static NSString *const SELECT_COUNT_SQL = @"SELECT count(id) as count from %@";
 //拼接时间的sql
-static NSString *const SELECT_MOSAIC_TIME_SQL = @"order by ";
+static NSString *const SELECT_MOSAIC_TIME_SQL = @"order by createdTime desc, position  desc ";
 
+//拼接降序sql
+static NSString *const ORDER_BY_DESC = @"order by %@ desc";
 
 //--------------------------------------------------------------------------------------------------------------------------------
 + (void)load
@@ -148,6 +155,17 @@ static NSString *const SELECT_MOSAIC_TIME_SQL = @"order by ";
     return   [date  dateByAddingTimeInterval: interval];
 }
 
+- (NSString *)getEastEightDistrictsTimeString
+{
+    NSDate *datenow = [NSDate date];
+    NSTimeZone *zone = [NSTimeZone systemTimeZone];
+    NSInteger interval = [zone secondsFromGMTForDate:datenow];
+    NSDate *localeDate = [datenow dateByAddingTimeInterval:interval];
+    NSString *timeSp = [NSString
+                        stringWithFormat:@"%ld", (long)[localeDate timeIntervalSince1970]];
+    return timeSp;
+}
+
 - (NSString * )returnInsertFiledWithData:(id)obj
 {
     if (![XGKeyValueStore isClassFromFoundation:[obj class]]) {
@@ -179,6 +197,7 @@ static NSString *const SELECT_MOSAIC_TIME_SQL = @"order by ";
               Object:(id)object
                 type:(NSString *)type
             position:(NSString *)position
+         createdTime:(NSString *)createdTime
            intoTable:(NSString *)tableName
             maxCount:(int)maxCount
                text1:(NSString *)text1
@@ -209,13 +228,13 @@ static NSString *const SELECT_MOSAIC_TIME_SQL = @"order by ";
     id  dicModel;
     NSData * jsonString;
     
-//#warning 加字段 --- modelJson
+    //#warning 加字段 --- modelJson
     NSString * textfiled = [self returnInsertFiledWithData:object];
     if ([textfiled isEqualToString:updateDicmodel]) {
         dicModel = object;
     }else{
         jsonString = [NSKeyedArchiver archivedDataWithRootObject:object];
-//        jsonString = object;
+        //        jsonString = object;
     }
     //为扩展 json做处理
     NSError * error;
@@ -225,7 +244,11 @@ static NSString *const SELECT_MOSAIC_TIME_SQL = @"order by ";
         debugLog(@"ERROR, 获取 json data 出错 竟然能把这个错提出来 你干了什么事? ");
         return;
     }
-    NSDate * createdTime = [self getEastEightDistrictsTime];
+    
+    if (nil == createdTime) {
+        createdTime = [self getEastEightDistrictsTimeString];
+    }
+    
     NSString * sql ;
     sql = [NSString stringWithFormat:INSERT_CUSTOM_ITEM_SQL, tableName];
     
@@ -237,8 +260,6 @@ static NSString *const SELECT_MOSAIC_TIME_SQL = @"order by ";
         debugLog(@"ERROR, 插入数据 出错 into table: %@", tableName);
     }
 }
-
-
 
 - (void)insertwithId:(NSString *)objectId
               Object:(id)object
@@ -257,11 +278,70 @@ static NSString *const SELECT_MOSAIC_TIME_SQL = @"order by ";
                  text2:nil
                  text3:nil];
 }
+
+
+- (void)insertwithId:(NSString *)objectId
+              Object:(id)object
+                type:(NSString *)type
+            position:(NSString *)position
+           intoTable:(NSString *)tableName
+            maxCount:(int)maxCount
+               text1:(NSString *)text1
+               text2:(NSString *)text2
+               text3:(NSString *)text3;
+{
+    [self insertwithId:objectId
+                Object:object
+                  type:type
+              position:position
+           createdTime:nil
+             intoTable:tableName
+              maxCount:maxCount
+                 text1:nil
+                 text2:nil
+                 text3:nil];
+}
+
+
+
+
 ///--------------删
+
+/**
+ *  通过条件删除数据
+ *
+ *  @param condition 删除调节
+ *  @param tableName 表名
+ */
+-(void)deleteObjByCondition:(NSString *)condition fromTable:(NSString *)tableName{
+    if (nil == condition || condition.length == 0) {
+        return;
+    }
+    if ([XGKeyValueStore checkTableName:tableName] == NO) {
+        return;
+    }
+    NSString *sql = [NSString stringWithFormat:DELETE_ITEMS_SQL_WITH_CONDITION, tableName,condition];
+    __block BOOL result;
+    [_dbQueue inDatabase:^(FMDatabase *db) {
+        result = [db executeUpdate:sql];
+        
+    }];
+    if (!result) {
+        debugLog(@"ERROR, 删除数据时出错 table: %@", tableName);
+        
+        NSString *errStr = [NSString
+                            stringWithFormat:@"您已引发bug 出错 : %@", condition];
+        debugLog(@"%@", errStr);
+    } else {
+        debugLog(@"error :删除了数据: %@", sql);
+    }
+}
+
 /**
  *  删 单个数据
  */
 - (void)deleteObjectById:(NSString *)objectId fromTable:(NSString *)tableName {
+    
     if ([XGKeyValueStore checkTableName:tableName] == NO) {
         return;
     }
@@ -353,6 +433,7 @@ static NSString *const SELECT_MOSAIC_TIME_SQL = @"order by ";
     [self updateWithId:objectId Object:object type:type position:position intoTable:tableName text1:nil text2:nil text3:nil];
 }
 
+
 /**
  *  修改一条数据
  *  id  object pos 不能为空
@@ -366,9 +447,31 @@ static NSString *const SELECT_MOSAIC_TIME_SQL = @"order by ";
                text2:(NSString *)text2
                text3:(NSString *)text3;
 {
+    [self updateWithId:objectId
+                Object:object
+                  type:type
+           createdTime:nil
+              position:position
+             intoTable:tableName
+                 text1:text1
+                 text2:text2
+                 text3:text3];
+}
+
+- (void)updateWithId:(NSString *)objectId
+              Object:(id)object
+                type:(NSString *)type
+         createdTime:(NSString *)createdTime
+            position:(NSString *)position
+           intoTable:(NSString *)tableName
+               text1:(NSString *)text1
+               text2:(NSString *)text2
+               text3:(NSString *)text3;
+{
     [self updateWithId:objectId updateCondition:updateObject object:object intoTable:tableName];
     [self updateWithId:objectId updateCondition:updateDicmodel object:object intoTable:tableName];
     [self updateWithId:objectId updateCondition:updateType object:type intoTable:tableName];
+    [self updateWithId:objectId updateCondition:updateCreatedTime object:createdTime intoTable:tableName];
     [self updateWithId:objectId updateCondition:updateText1 object:text1 intoTable:tableName];
     [self updateWithId:objectId updateCondition:updateText2 object:text2 intoTable:tableName];
     [self updateWithId:objectId updateCondition:updateText3 object:text3 intoTable:tableName];
@@ -406,7 +509,15 @@ static NSString *const SELECT_MOSAIC_TIME_SQL = @"order by ";
             //如果存储的是模型需要把 字典删除
             [self updateOneWithId:object Condition:updateObject intoTable:tableName];
         }else{
-            upObject = [NSKeyedArchiver archivedDataWithRootObject:object];
+            
+            @try {
+                upObject = [NSKeyedArchiver archivedDataWithRootObject:object];
+            } @catch (NSException *exception) {
+                debugLog(@"XGKeyValueStore.m  516行 修改数据  转data出错 \n "
+                      @"exception:%@",
+                      exception);
+            } @finally {
+            }
 //            upObject = object;
             //如果存储的是字典 需要把 模型删除
             [self updateOneWithId:object Condition:updateDicmodel intoTable:tableName];
@@ -422,7 +533,11 @@ static NSString *const SELECT_MOSAIC_TIME_SQL = @"order by ";
         result = [db executeUpdate:sql, upObject,objectId];
     }];
     if (!result) {
-        debugLog(@"ERROR, failed to insert/replace into table: %@", tableName);
+        debugLog(@"ERROR, 没有更新 table: %@  condition : %@  obj :%@ ",
+                 tableName, condition, object);
+    } else {
+        debugLog(@" 更新成功 table: %@  condition : %@  obj :%@ ", tableName,
+                 condition, object);
     }
 }
 
@@ -464,7 +579,7 @@ static NSString *const SELECT_MOSAIC_TIME_SQL = @"order by ";
  *  @param Condition 筛选条件 比如 type = 1111 and id > 2 sql条件交给用户
  *
  *  @param count 如果为空默认是所有的数据
- *  @return 返回 这个表中的满足这个查询条件的 数据  (倒序 先进后出)
+ *  @return 返回 这个表中的满足这个查询条件的 数据
  */
 - (NSArray *)getObjItemWithSearchCondition:(NSString *)Condition Count:(int)count fromTable:(NSString *)tableName;
 {
@@ -488,6 +603,7 @@ static NSString *const SELECT_MOSAIC_TIME_SQL = @"order by ";
 }
 
 
+
 /**
  *  从某条数据开始 取几条数据
  *
@@ -497,42 +613,79 @@ static NSString *const SELECT_MOSAIC_TIME_SQL = @"order by ";
  *  2 >   count 如果为空默认是从id之后的所有的数据
  *  3 >   如果 id 与 count 都为空 会是这个表中所有数据
  */
-- (NSArray *)getObjItemsWithobjId:(NSString *)objId Count:(int)count fromTable:(NSString *)tableName;
+- (NSArray *)getObjItemsWithobjId:(NSString *)objId
+                            Count:(int)count
+                        fromTable:(NSString *)tableName;
 {
-    [self createCustomTableWithName:tableName];
-
-    NSArray * array = [self getObjItemsWithobjId:objId Count:count selectOrder:nil fromTable:tableName];
-    if (array) {
-        return array;
-    }
+    return [self getCustomObjItemsWithobjId:objId
+                               isNeedNewObj:NO
+                                      Count:count
+                                  fromTable:tableName
+                                     descBy:nil];
     return nil;
 }
 
-- (NSArray *)getObjItemsWithobjId:(NSString *)objId Count:(int)count selectOrder:(NSString *)selectOrder fromTable:(NSString *)tableName;
+- (NSArray *)getNewObjItemsWithobjId:(NSString *)objId
+                               Count:(int)count
+                           fromTable:(NSString *)tableName;
+{
+    
+    return [self getCustomObjItemsWithobjId:objId
+                               isNeedNewObj:YES
+                                      Count:count
+                                  fromTable:tableName
+                                     descBy:nil];
+    
+    return nil;
+}
+
+- (NSArray *)getObjItemsWithCount:(int)count
+                        fromTable:(NSString *)tableName
+                           descBy:(NSString *)columnName;
+{
+    
+    return [self getCustomObjItemsWithobjId:nil
+                               isNeedNewObj:NO
+                                      Count:count
+                                  fromTable:tableName
+                                     descBy:columnName];
+    
+    return nil;
+}
+
+- (NSArray *)getCustomObjItemsWithobjId:(NSString *)objId
+                           isNeedNewObj:(BOOL)needNewObj
+                                  Count:(int)count
+                              fromTable:(NSString *)tableName
+                                 descBy:(NSString *)columnName;
 {
     [self createCustomTableWithName:tableName];
-
+    
     if ([XGKeyValueStore checkTableName:tableName] == NO) {
         return nil;
     }
-    NSString * select_Order;
-    if (selectOrder) {
-        select_Order = [NSString stringWithFormat:@"%@ %@ desc,createdTime desc",SELECT_MOSAIC_TIME_SQL,select_Order];
-    }else{
-        select_Order = [NSString stringWithFormat:@"%@ createdTime desc",SELECT_MOSAIC_TIME_SQL];
-    }
-    NSString * sql;
+    NSString *sql;
+    
     if (objId) {
-        sql = [NSString stringWithFormat:@"%@ %@ where createdTime < (select createdTime from %@ where id= '%@') %@",SELECT_CONDITION_ITEM_SQL,tableName,tableName,objId,select_Order];
-    }else{
-        sql =[NSString stringWithFormat:@"%@ %@ %@",SELECT_CONDITION_ITEM_SQL,tableName,select_Order];
+        NSString *needNewStr = needNewObj ? @">" : @"<";
+        
+        sql = [NSString
+               stringWithFormat:@"%@ %@ where createdTime %@ (select createdTime "
+               @"from %@ where id= '%@') %@",
+               SELECT_CONDITION_ITEM_SQL, tableName, needNewStr,
+               tableName, objId, SELECT_MOSAIC_TIME_SQL];
+    } else {
+        sql = [NSString stringWithFormat:@"%@ %@ %@", SELECT_CONDITION_ITEM_SQL,
+               tableName, SELECT_MOSAIC_TIME_SQL];
     }
     if (count) {
-        sql = [NSString stringWithFormat:@"%@ Limit %d",sql,count];
+        sql = [NSString stringWithFormat:@"%@ Limit %d", sql, count];
+    }
+    if (columnName) {
+        //        sql = [NSString stringWithFormat:@"%@ order by %@
+        //        desc",sql,columnName];
     }
     return [self getItemsWithSQL:sql];
-    
-
     
     return nil;
 }
@@ -540,10 +693,11 @@ static NSString *const SELECT_MOSAIC_TIME_SQL = @"order by ";
 /**
  *  读取某个表中所有的数据
  */
-- (NSArray *)getAllItemsFromTable:(NSString *)tableName {
-    [self createCustomTableWithName:tableName];
-
-    NSArray * result = [self getObjItemsWithobjId:nil Count:0 fromTable:tableName];
+- (NSArray *)getAllItemsFromTable:(NSString *)tableName
+{
+    
+    NSArray *result =
+    [self getObjItemsWithobjId:nil Count:0 fromTable:tableName];
     if (result) {
         return result;
     }
@@ -556,9 +710,23 @@ static NSString *const SELECT_MOSAIC_TIME_SQL = @"order by ";
  */
 - (NSArray *)getAnyCount:(int)count fromTable:(NSString *)tableName;
 {
-    [self createCustomTableWithName:tableName];
+    NSArray *result =
+    [self getObjItemsWithobjId:nil Count:count fromTable:tableName];
+    if (result) {
+        return result;
+    }
+    return nil;
+}
 
-    NSArray * result = [self getObjItemsWithobjId:nil Count:count fromTable:tableName];
+/**
+ *   取出某个表里面的最新的count条数据并按照某个字段降序排序
+ */
+- (NSArray *)getAnyCount:(int)count
+               fromTable:(NSString *)tableName
+                  descBy:(NSString *)columnName;
+{
+    NSArray *result =
+    [self getObjItemsWithCount:count fromTable:tableName descBy:columnName];
     if (result) {
         return result;
     }
